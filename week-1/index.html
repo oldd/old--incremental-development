@@ -46,7 +46,7 @@
       <br>
       <a id='to-repo' style='visibility:hidden'
         href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target="_blank">
-        <code>to module repo</code>
+        <code>module repository</code>
       </a>
     </div>
 
@@ -68,12 +68,13 @@
           <code>(~5 min)</code>
         </section>
         <section>
-          <h2>The Internet</h2>
+          <h2>Git & GitHub</h2>
           <br>
           <ul>
-            <li>What is it?</li>
-            <li>How does it work?</li>
-            <li>What are web apps?</li>
+            <li>Practice with Pull Requests</li>
+            <li>Practice cloning, pushing & pulling</li>
+            <li>How to use Issues for Code Reviews</li>
+            <li>Creating and merging branches</li>
           </ul>
         </section>
         <section>
@@ -87,15 +88,43 @@
           </ul>
         </section>
         <section>
-          <h2>Git & GitHub</h2>
+          <h2>Incremental Development</h2>
           <br>
           <ul>
-            <li>Practice with Pull Requests</li>
-            <li>Practice cloning, pushing & pulling</li>
-            <li>How to use Issues for Code Reviews</li>
-            <li>How to use Branches with User Stories</li>
+            <li>What is a user story?</li>
+            <li>Break simple sites into user stories</li>
+            <li>Order user stories for development</li>
+            <li>Use Git branches to organize development</li>
           </ul>
         </section>
+        <!-- if there's time -->
+        <!-- <section>
+                  <h2>The Internet</h2>
+                  <br>
+                  <ul>
+                    <li>What is it?</li>
+                    <li>How does it work?</li>
+                    <li>What are web apps?</li>
+                  </ul>
+                </section> -->
+      </section>
+
+      <section id="installations">
+        <h2>Installations</h2>
+        <br>
+        <ul>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target='_blank'>
+              liveServer</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target='_blank'>
+              Git Lense</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target='_blank'>
+              ESLint</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target='_blank'>
+              prettier</a></li>
+        </ul>
+        <br>
+        <br>
+        <code>(~5 min)</code>
       </section>
 
       <section id="review-questions">
@@ -105,38 +134,6 @@
         <code>(~20 min)</code>
       </section>
 
-      <section id="what-is-internet">
-        <section>
-          <h3>What is internet?</h3>
-          <iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0"
-            class="giphy-embed" allowFullScreen></iframe>
-          <p><a href="https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv"></a></p>
-          <code>(~10 min)</code>
-        </section>
-        <section>
-          <img
-            src="https://073bddbe7aa062defd37fde3-cwzdvdpfea.netdna-ssl.com/wp-content/uploads/2017/05/cloud-computing-logistics-2017-1000x640.jpg">
-        </section>
-        <section>
-          <h3>Yeah, great!</h3>
-          <iframe src="https://giphy.com/embed/dds5k7CtNGUpN93Abq" width="480" height="480" frameBorder="0"
-            class="giphy-embed" allowFullScreen></iframe>
-          <p><a href="https://giphy.com/gifs/lifetimetv-abs-lifetime-american-beauty-star-dds5k7CtNGUpN93Abq"></a></p>
-          <h4>But how this is working?</h4>
-        </section>
-        <section>
-          <img src="https://miro.medium.com/max/1200/0*th2x89zHuZmHGsLJ.png">
-        </section>
-        <section>
-          <img src="https://miro.medium.com/max/2560/1*AwGI1e13BoLvUd2wThmSLw.jpeg">
-        </section>
-        <section>
-          <img src="https://www.techcommuters.com/wp-content/uploads/2019/06/browsers.png">
-        </section>
-        <section>
-          <h1>DEMO TIME</h1>
-        </section>
-      </section>
 
       <section id='git-github-gitkraken'>
         <section>
@@ -231,9 +228,10 @@
         <section id='above-below'>
           <script>
             codeAlong({
-              type: 'document',
+              title: 'above / below',
               container: 'above-below',
-              path: `./examples/above-below.html`
+              source: `./examples/above-below.html`,
+              type: 'document'
             });
           </script>
         </section>
@@ -241,9 +239,10 @@
         <section id='tables'>
           <script>
             codeAlong({
+              title: 'tables',
               type: 'document',
               container: 'tables',
-              path: `./examples/tables.html`
+              source: `./examples/tables.html`
             });
           </script>
         </section>
@@ -251,9 +250,10 @@
         <section id='class-vs-tag'>
           <script>
             codeAlong({
+              title: 'class vs. tag',
               type: 'document',
               container: 'class-vs-tag',
-              path: `./examples/class-vs-tag.html`
+              source: `./examples/class-vs-tag.html`
             });
           </script>
         </section>
@@ -261,9 +261,10 @@
         <section id='inline-styles'>
           <script>
             codeAlong({
+              title: 'inline styles',
               type: 'document',
               container: 'inline-styles',
-              path: `./examples/inline-styles.html`
+              source: `./examples/inline-styles.html`
             });
           </script>
         </section>
@@ -271,9 +272,10 @@
         <section id='internal-styles'>
           <script>
             codeAlong({
+              title: 'internal styles',
               type: 'document',
               container: 'internal-styles',
-              path: `./examples/internal-styles.html`
+              source: `./examples/internal-styles.html`
             });
           </script>
         </section>
@@ -281,9 +283,10 @@
         <section id='css-selectors'>
           <script>
             codeAlong({
+              title: 'css selectors',
               type: 'document',
               container: 'css-selectors',
-              path: `./examples/css-selectors.html`
+              source: `./examples/css-selectors.html`
             });
           </script>
         </section>
@@ -291,9 +294,10 @@
         <section id='positioning'>
           <script>
             codeAlong({
+              title: 'positioning',
               type: 'document',
               container: 'positioning',
-              path: `./examples/positioning.html`
+              source: `./examples/positioning.html`
             });
           </script>
         </section>
@@ -323,6 +327,35 @@
               Case Study
             </a>
           </h2>
+        </section>
+      </section>
+
+
+      <section>
+        <section>
+          <h2>Incremental Example</h2>
+          <br>
+          <br>
+          <p>Break into small groups to study this example</p>
+          <br>
+          <code>(~10 min)</code>
+        </section>
+        <section id='all-about-trees'>
+          <script>
+            codeAlong({
+              title: 'All About Trees',
+              container: 'all-about-trees',
+              source: [
+                "./all-about-trees/0-empty-boilerplate.html",
+                "./all-about-trees/1-header-footer-dom.html",
+                "./all-about-trees/2-header-footer-styles.html",
+                "./all-about-trees/3-main-section-dom.html",
+                "./all-about-trees/4-main-section-styles.html",
+                "./all-about-trees/5-aside-dom.html",
+                "./all-about-trees/6-aside-styles.html",
+              ]
+            });
+          </script>
         </section>
       </section>
 
@@ -386,6 +419,70 @@
         </section>
       </section>
 
+      <section id='homework-launch'>
+        <section>
+          <h2>Homework Launch</h2>
+          <br>
+          <p>Start the homework together, so you have no excuses :)</p>
+          <br>
+          <code>(~20 min)</code>
+        </section>
+        <section>
+          <h3><a target="_blank" href="https://github.com/hackyourfuturebelgium/homework-submission">
+              Homework Submission Process</a></h3>
+          <br>
+          <ol>
+            <li>Create your week 1 issue</li>
+            <li>Add the issue to the module project</li>
+            <li>Create the repo for your project</li>
+            <li>Link to your project repo in the new issue</li>
+            <li>Fork the exercise repositories</li>
+            <li>Link also to them in the issue</li>
+            <li>Sign in to
+              <a href="https://www.freecodecamp.org/" target='_blank'>
+                FCC</a>using GitHub
+            </li>
+            <li>Link your public profile to the issue</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Got all that?</h2>
+        </section>
+      </section>
+
+      <!-- if there is time -->
+      <!-- <section id="what-is-internet">
+          <section>
+            <h3>What is internet?</h3>
+            <iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0"
+              class="giphy-embed" allowFullScreen></iframe>
+            <p><a href="https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv"></a></p>
+            <code>(~10 min)</code>
+          </section>
+          <section>
+            <img
+              src="https://073bddbe7aa062defd37fde3-cwzdvdpfea.netdna-ssl.com/wp-content/uploads/2017/05/cloud-computing-logistics-2017-1000x640.jpg">
+          </section>
+          <section>
+            <h3>Yeah, great!</h3>
+            <iframe src="https://giphy.com/embed/dds5k7CtNGUpN93Abq" width="480" height="480" frameBorder="0"
+              class="giphy-embed" allowFullScreen></iframe>
+            <p><a href="https://giphy.com/gifs/lifetimetv-abs-lifetime-american-beauty-star-dds5k7CtNGUpN93Abq"></a></p>
+            <h4>But how this is working?</h4>
+          </section>
+          <section>
+            <img src="https://miro.medium.com/max/1200/0*th2x89zHuZmHGsLJ.png">
+          </section>
+          <section>
+            <img src="https://miro.medium.com/max/2560/1*AwGI1e13BoLvUd2wThmSLw.jpeg">
+          </section>
+          <section>
+            <img src="https://www.techcommuters.com/wp-content/uploads/2019/06/browsers.png">
+          </section>
+          <section>
+            <h1>DEMO TIME</h1>
+          </section>
+        </section> -->
 
 
       <section id="thats-all">
