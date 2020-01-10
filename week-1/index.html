@@ -44,7 +44,8 @@
     <div class='footer'>
       <code id="footer-text">ESC to overview</code>
       <br>
-      <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target="_blank">
+      <a id='to-repo' style='visibility:hidden'
+        href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target="_blank">
         <code>to module repo</code>
       </a>
     </div>
@@ -382,8 +383,6 @@
         </section>
         <section>
           <h2><a href="https://github.com/hackyourfuturebelgium/tomato-timer-code-along">Starter Repo</a></h2>
-          <br><br>
-          <p>psst. come up with different user stories than the case study!</p>
         </section>
       </section>
 
@@ -421,12 +420,16 @@
       ]
     });
 
+
     Reveal.addEventListener('overviewshown', function (event) {
       document.getElementById('footer-text').innerHTML = "ESC into slide";
+      document.getElementById('to-repo').style.visibility = 'visible';
     });
     Reveal.addEventListener('overviewhidden', function (event) {
       document.getElementById('footer-text').innerHTML = "ESC to overview";
+      document.getElementById('to-repo').style.visibility = 'visible';
     });
+
 
 
   </script>
