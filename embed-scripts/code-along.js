@@ -1,32 +1,3 @@
-{
-  const configSchema = {
-    container: 'string, element, empty',
-    title: 'string, to become a main header',
-    source: 'undefined -> empty code-along. string -> fetch from relative path. object -> name & path. array of strings or objects -> tabbed the-previous-things'
-  }
-
-  const resultSchema = {
-    config: 'the unmodified config object',
-    container: "element with input & output containers",
-    editor: 'ace editor',
-    resultsEl: 'coupler',
-    active: "the active step object",
-    steps: {
-      type: 'array',
-      description: 'if no steps, empty editor/results. if 1 step, no tabs. if 2+ steps, tab-it',
-      items: {
-        path: "relative path to file",
-        code: "the code",
-        session: "ace session",
-        results: "element with name & most recent evaluation",
-        button: "the button that goes up top",
-        name: "given or default name "
-      }
-    }
-  }
-}
-
-
 async function codeAlong(config) {
 
   const container = (() => {
@@ -260,4 +231,32 @@ codeAlong.setup = async (steps, title) => {
   return iframe;
 
 }
+
+
+// {
+//   const configSchema = {
+//     container: 'string, element, empty',
+//     title: 'string, to become a main header',
+//     source: 'undefined -> empty code-along. string -> fetch from relative path. object -> name & path. array of strings or objects -> tabbed the-previous-things'
+//   }
+
+//   const resultSchema = {
+//     config: 'the unmodified config object',
+//     container: "element with input & output containers",
+//     editor: 'ace editor',
+//     resultsEl: 'coupler',
+//     active: "the active step object",
+//     steps: {
+//       type: 'array',
+//       description: 'if no steps, empty editor/results. if 1 step, no tabs. if 2+ steps, tab-it',
+//       items: {
+//         path: "relative path to file",
+//         code: "the code",
+//         session: "ace session",
+//         name: "given or default name "
+//       }
+//     }
+//   }
+// }
+
 
