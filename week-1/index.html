@@ -1,104 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>wk 1: Incremental Development</title>
 
-  <title>wk 1: Incremental Development</title>
+    <script src="../embed-scripts/code-along.js"></script>
 
-  <script src='../embed-scripts/code-along.js'></script>
+    <link rel="stylesheet" href="../reveal.js/css/reset.css" />
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" />
 
-  <link rel="stylesheet" href="../reveal.js/css/reset.css">
-  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css"> -->
 
-  <!-- Theme used for syntax highlighting of code -->
-  <!-- <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css"> -->
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "../reveal.js/stylesheet";
+      link.type = "../reveal.js/text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../reveal.js/css/print/pdf.css"
+        : "./reveal.js/css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = '../reveal.js/stylesheet';
-    link.type = '../reveal.js/text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
+    <style>
+      /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+      .reveal .footer {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        font-size: 0.5em;
+      }
+    </style>
+  </head>
 
-  <style>
-    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
-    .reveal .footer {
-      position: absolute;
-      bottom: 1em;
-      left: 1em;
-      font-size: 0.5em;
-    }
-  </style>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="footer">
+        <code id="footer-text">ESC to overview</code>
+        <br />
+        <a
+          id="to-repo"
+          style="visibility:hidden"
+          href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1"
+          target="_blank"
+        >
+          <code>module repository</code>
+        </a>
+      </div>
 
-<body>
-
-
-  <div class="reveal">
-
-    <div class='footer'>
-      <code id="footer-text">ESC to overview</code>
-      <br>
-      <a id='to-repo' style='visibility:hidden'
-        href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target="_blank">
-        <code>module repository</code>
-      </a>
-    </div>
-
-    <div class="slides">
-
-      <section id='cover-slide'>
-        <h2>Incremental Development</h2>
-        <br>
-        <p>Week 1</p>
-      </section>
-
-      <section id="learning-objectives">
-        <section>
-          <h2>Learning Objectives</h2>
-          <p>
-            What can you expect to cover in class today?
-          </p>
-          <br>
-          <code>(~5 min)</code>
-        </section>
-        <section>
-          <h2>Git & GitHub</h2>
-          <br>
-          <ul>
-            <li>Practice with Pull Requests</li>
-            <li>Practice cloning, pushing & pulling</li>
-            <li>How to use Issues for Code Reviews</li>
-            <li>Creating and merging branches</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Document Life-Cycle</h2>
-          <br>
-          <ul>
-            <li>What is source code?</li>
-            <li>What is the DOM?</li>
-            <li>What is a rendered document?</li>
-            <li>How to inspect the DOM.</li>
-          </ul>
-        </section>
-        <section>
+      <div class="slides">
+        <section id="cover-slide">
           <h2>Incremental Development</h2>
-          <br>
-          <ul>
-            <li>What is a user story?</li>
-            <li>Break simple sites into user stories</li>
-            <li>Order user stories for development</li>
-            <li>Use Git branches to organize development</li>
-          </ul>
+          <br />
+          <p>Week 1</p>
         </section>
-        <!-- if there's time -->
-        <!-- <section>
+
+        <section id="learning-objectives">
+          <section>
+            <h2>Learning Objectives</h2>
+            <p>
+              What can you expect to cover in class today?
+            </p>
+            <br />
+            <code>(~5 min)</code>
+          </section>
+          <section>
+            <h2>Git & GitHub</h2>
+            <br />
+            <ul>
+              <li>Practice with Pull Requests</li>
+              <li>Practice cloning, pushing & pulling</li>
+              <li>How to use Issues for Code Reviews</li>
+              <li>Creating and merging branches</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Document Life-Cycle</h2>
+            <br />
+            <ul>
+              <li>What is source code?</li>
+              <li>What is the DOM?</li>
+              <li>What is a rendered document?</li>
+              <li>How to inspect the DOM.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Incremental Development</h2>
+            <br />
+            <ul>
+              <li>What is a user story?</li>
+              <li>Break simple sites into user stories</li>
+              <li>Order user stories for development</li>
+              <li>Use Git branches to organize development</li>
+            </ul>
+          </section>
+          <!-- if there's time -->
+          <!-- <section>
                   <h2>The Internet</h2>
                   <br>
                   <ul>
@@ -107,351 +111,442 @@
                     <li>What are web apps?</li>
                   </ul>
                 </section> -->
-      </section>
-
-      <section id="installations">
-        <h2>Installations</h2>
-        <br>
-        <ul>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target='_blank'>
-              liveServer</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target='_blank'>
-              Git Lense</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target='_blank'>
-              ESLint</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target='_blank'>
-              prettier</a></li>
-        </ul>
-        <br>
-        <br>
-        <code>(~5 min)</code>
-      </section>
-
-      <section id="review-questions">
-        <h2>Any questions from last week?</h2>
-        <br>
-        <br>
-        <code>(~20 min)</code>
-      </section>
-
-
-      <section id='git-github-gitkraken'>
-        <section>
-          <h2>Git/Hub Workflow Practice</h2>
-          <br>
-          <br>
-          <p>Some step-by-step practice.</p>
-          <br>
-          <code>(~30 min)</code>
         </section>
-        <section>
-          <h2>All together</h2>
-          <br>
-          <br>
-          <p><a
-              href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-add-new-file-push.md"
-              target="_blank">
-              Pull, add a file, commit, push
-            </a></p>
-          <br>
-        </section>
-        <section>
-          <h2>In small groups</h2>
-          <br><br>
+
+        <section id="installations">
+          <h2>Installations</h2>
+          <br />
           <ul>
-            <li><a
-                href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-request-and-merge.md"
-                target="_blank">
-                Pull Requests & Merging
-              </a></li>
-            <li><a href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/code-review.md"
-                target="_blank">
-                Code Review
-              </a></li>
-          </ul>
-          <br>
-          <br>
-          <p><a href="https://study.hackyourfuture.be/git-and-github" target="_blank">(helpful links)</a></p>
-        </section>
-      </section>
-
-      <section id="document-life-cycle">
-        <section>
-          <h2>Document Life Cycle</h2>
-          <br>
-          <ol>
-            <li>Source Code (HTML & CSS)</li>
-            <li>Document Object Model</li>
-            <li>Rendered Document</li>
-          </ol>
-          <br>
-          <br>
-          <code>(~30 min)</code>
-        </section>
-
-        <section>
-          <h2>Small group study time!</h2>
-          <br>
-          <ul>
-            <li><a href="#above-below">above / below</a></li>
-            <li><a href="#tables">tables</a></li>
-            <li><a href="#class-vs-tag">class vs. tag</a></li>
-            <li><a href="#inline-styles">inline styles</a></li>
-            <li><a href="#internal-styles">internal styles</a></li>
-            <li><a href="#css-selectors">CSS selectors</a></li>
-            <li><a href="#positioning">positioning</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Helpful Links</h2>
-          <br>
-          <ul>
-            <li><a href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549" target="_blank">How to
-                inspect an element</a>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+                target="_blank"
+              >
+                liveServer</a
+              >
             </li>
-            <li><a href="https://hackyourfuture.be/inspecting-the-dom" target="_blank">Inspecting the DOM?</a></li>
-            <li><a
-                href="https://software.hixie.ch/utilities/js/live-dom-viewer/?%3C!DOCTYPE%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%27utf-8%27%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.container%20%7B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.above%20%7B%0A%20%20%20%20%20%20order%3A%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.below%20%7B%0A%20%20%20%20%20%20order%3A%202%3B%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cp%20id%3D%22p-1%22%20class%3D%22below%22%3E%0A%20%20%20%20%20%20first%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cp%20id%3D%22p-2%22%20class%3D%22above%22%3E%0A%20%20%20%20%20%20second%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%0A%3C%2Fhtml%3E%0A"
-                target="_blank">Live DOM Viewer</a></li>
-            <li><a href="https://janke-learning.org/dom-tutor" target="_blank">DOM Tutor</a></li>
-            <li><a href="https://zapier.com/blog/inspect-element-tutorial/" target="_blank">Modify
-                the DOM. (does the source change?)</a>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+                target="_blank"
+              >
+                Git Lense</a
+              >
             </li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance"
-                target="_blank">cascade & inheritance</a></li>
-            <li><a href="https://css-tricks.com/specifics-on-css-specificity/" target="_blank">CSS Specificity</a></li>
-            <li><a href="https://css-tricks.com/almanac/properties/p/position/" target="_blank">CSS Positioning</a></li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+                target="_blank"
+              >
+                ESLint</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                target="_blank"
+              >
+                prettier</a
+              >
+            </li>
           </ul>
+          <br />
+          <br />
+          <code>(~5 min)</code>
         </section>
 
-        <section id='above-below'>
-          <script>
-            codeAlong({
-              title: 'above / below',
-              container: 'above-below',
-              source: `./examples/above-below.html`,
-              type: 'document'
-            });
-          </script>
-        </section>
-
-        <section id='tables'>
-          <script>
-            codeAlong({
-              title: 'tables',
-              type: 'document',
-              container: 'tables',
-              source: `./examples/tables.html`
-            });
-          </script>
-        </section>
-
-        <section id='class-vs-tag'>
-          <script>
-            codeAlong({
-              title: 'class vs. tag',
-              type: 'document',
-              container: 'class-vs-tag',
-              source: `./examples/class-vs-tag.html`
-            });
-          </script>
-        </section>
-
-        <section id='inline-styles'>
-          <script>
-            codeAlong({
-              title: 'inline styles',
-              type: 'document',
-              container: 'inline-styles',
-              source: `./examples/inline-styles.html`
-            });
-          </script>
-        </section>
-
-        <section id='internal-styles'>
-          <script>
-            codeAlong({
-              title: 'internal styles',
-              type: 'document',
-              container: 'internal-styles',
-              source: `./examples/internal-styles.html`
-            });
-          </script>
-        </section>
-
-        <section id='css-selectors'>
-          <script>
-            codeAlong({
-              title: 'css selectors',
-              type: 'document',
-              container: 'css-selectors',
-              source: `./examples/css-selectors.html`
-            });
-          </script>
-        </section>
-
-        <section id='positioning'>
-          <script>
-            codeAlong({
-              title: 'positioning',
-              type: 'document',
-              container: 'positioning',
-              source: `./examples/positioning.html`
-            });
-          </script>
-        </section>
-
-      </section>
-
-      <section id="user-stories">
-        <section>
-          <h2>User Stories</h2>
-          <br>
-          <br>
-          <code>(~15 min)</code>
-        </section>
-        <section>
-          <h2>User Stories</h2>
-          <br>
-          <br>
-          <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
-          </ul>
-        </section>
-        <section>
-          <h2>
-            <a href="./user-stories-case-study.html" target="_blank">
-              Case Study
-            </a>
-          </h2>
-        </section>
-      </section>
-
-
-      <section>
-        <section>
-          <h2>Incremental Example</h2>
-          <br>
-          <br>
-          <p>Break into small groups to study this example</p>
-          <br>
-          <code>(~10 min)</code>
-        </section>
-        <section id='all-about-trees'>
-          <script>
-            codeAlong({
-              title: 'All About Trees',
-              container: 'all-about-trees',
-              source: [
-                "./all-about-trees/0-empty-boilerplate.html",
-                "./all-about-trees/1-header-footer-dom.html",
-                "./all-about-trees/2-header-footer-styles.html",
-                "./all-about-trees/3-main-section-dom.html",
-                "./all-about-trees/4-main-section-styles.html",
-                "./all-about-trees/5-aside-dom.html",
-                "./all-about-trees/6-aside-styles.html",
-              ]
-            });
-          </script>
-        </section>
-      </section>
-
-
-      <section id="using-git-branches">
-        <section>
-          <h2>Using Git Branches</h2>
-          <br>
-          <br>
-          <code>(~15 min)</code>
-        </section>
-        <section>
-          <h2>Git Branches</h2>
-          <br>
-          <br>
-          <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
-          </ul>
-        </section>
-        <section>
-          <h2>
-            <a href="https://github.com/HackYourFutureBelgium/built-with-branches" target="_blank">
-              Case Study
-            </a>
-          </h2>
-        </section>
-      </section>
-
-      <section id="code-along-project">
-        <section>
-          <h2>Code-Along Project</h2>
-          <br>
-          <br>
-          <code>(~60 min)</code>
-        </section>
-        <section>
-          <h2>Objectives:</h2>
-          <br>
-          <ul>
-            <li>Develop from a mock-up</li>
-            <li>Plan steps ahead of time</li>
-            <li>Start from an empty project</li>
-            <li>Develop each step on one branch</li>
-            <li>Use semantic HTML5 elements</li>
-            <li>Deploy before class ends</li>
-          </ul>
-        </section>
-        <section>
-          <h2>HTML5 Semantic Layout</h2><br>
-          <br>
-          <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
-          </ul>
-        </section>
-        <section>
-          <h2><a href="https://github.com/hackyourfuturebelgium/tomato-timer-code-along">Starter Repo</a></h2>
-        </section>
-      </section>
-
-      <section id='homework-launch'>
-        <section>
-          <h2>Homework Launch</h2>
-          <br>
-          <p>Start the homework together, so you have no excuses :)</p>
-          <br>
+        <section id="review-questions">
+          <h2>Any questions from last week?</h2>
+          <br />
+          <br />
           <code>(~20 min)</code>
         </section>
-        <section>
-          <h3><a target="_blank" href="https://github.com/hackyourfuturebelgium/homework-submission">
-              Homework Submission Process</a></h3>
-          <br>
-          <ol>
-            <li>Create your week 1 issue</li>
-            <li>Add the issue to the module project</li>
-            <li>Create the repo for your project</li>
-            <li>Link to your project repo in the new issue</li>
-            <li>Fork the exercise repositories</li>
-            <li>Link also to them in the issue</li>
-            <li>Sign in to
-              <a href="https://www.freecodecamp.org/" target='_blank'>
-                FCC</a>using GitHub
-            </li>
-            <li>Link your public profile to the issue</li>
-          </ol>
-        </section>
-        <section>
-          <h2>Got all that?</h2>
-        </section>
-      </section>
 
-      <!-- if there is time -->
-      <!-- <section id="what-is-internet">
+        <section id="git-github-gitkraken">
+          <section>
+            <h2>Git/Hub Workflow Practice</h2>
+            <br />
+            <br />
+            <p>Some step-by-step practice.</p>
+            <br />
+            <code>(~30 min)</code>
+          </section>
+          <section>
+            <h2>All together</h2>
+            <br />
+            <br />
+            <p>
+              <a
+                href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-add-new-file-push.md"
+                target="_blank"
+              >
+                Pull, add a file, commit, push
+              </a>
+            </p>
+            <br />
+          </section>
+          <section>
+            <h2>In small groups</h2>
+            <br /><br />
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-request-and-merge.md"
+                  target="_blank"
+                >
+                  Pull Requests & Merging
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/code-review.md"
+                  target="_blank"
+                >
+                  Code Review
+                </a>
+              </li>
+            </ul>
+            <br />
+            <br />
+            <p>
+              <a
+                href="https://study.hackyourfuture.be/git-and-github"
+                target="_blank"
+                >(helpful links)</a
+              >
+            </p>
+          </section>
+        </section>
+
+        <section id="document-life-cycle">
+          <section>
+            <h2>Document Life Cycle</h2>
+            <br />
+            <ol>
+              <li>Source Code (HTML & CSS)</li>
+              <li>Document Object Model</li>
+              <li>Rendered Document</li>
+            </ol>
+            <br />
+            <br />
+            <code>(~30 min)</code>
+          </section>
+
+          <section>
+            <h2>Small group study time!</h2>
+            <br />
+            <ul>
+              <li><a href="#above-below">above / below</a></li>
+              <li><a href="#tables">tables</a></li>
+              <li><a href="#class-vs-tag">class vs. tag</a></li>
+              <li><a href="#inline-styles">inline styles</a></li>
+              <li><a href="#internal-styles">internal styles</a></li>
+              <li><a href="#css-selectors">CSS selectors</a></li>
+              <li><a href="#positioning">positioning</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Helpful Links</h2>
+            <br />
+            <ul>
+              <li>
+                <a
+                  href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549"
+                  target="_blank"
+                  >How to inspect an element</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hackyourfuture.be/inspecting-the-dom"
+                  target="_blank"
+                  >Inspecting the DOM?</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://software.hixie.ch/utilities/js/live-dom-viewer/?%3C!DOCTYPE%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%27utf-8%27%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.container%20%7B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.above%20%7B%0A%20%20%20%20%20%20order%3A%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.below%20%7B%0A%20%20%20%20%20%20order%3A%202%3B%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cp%20id%3D%22p-1%22%20class%3D%22below%22%3E%0A%20%20%20%20%20%20first%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cp%20id%3D%22p-2%22%20class%3D%22above%22%3E%0A%20%20%20%20%20%20second%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%0A%3C%2Fhtml%3E%0A"
+                  target="_blank"
+                  >Live DOM Viewer</a
+                >
+              </li>
+              <li>
+                <a href="https://janke-learning.org/dom-tutor" target="_blank"
+                  >DOM Tutor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://zapier.com/blog/inspect-element-tutorial/"
+                  target="_blank"
+                  >Modify the DOM. (does the source change?)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance"
+                  target="_blank"
+                  >cascade & inheritance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://css-tricks.com/specifics-on-css-specificity/"
+                  target="_blank"
+                  >CSS Specificity</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://css-tricks.com/almanac/properties/p/position/"
+                  target="_blank"
+                  >CSS Positioning</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section id="above-below">
+            <script>
+              codeAlong({
+                title: "above / below",
+                container: "above-below",
+                source: `./examples/above-below.html`,
+                type: "document"
+              });
+            </script>
+          </section>
+
+          <section id="tables">
+            <script>
+              codeAlong({
+                title: "tables",
+                type: "document",
+                container: "tables",
+                source: `./examples/tables.html`
+              });
+            </script>
+          </section>
+
+          <section id="class-vs-tag">
+            <script>
+              codeAlong({
+                title: "class vs. tag",
+                type: "document",
+                container: "class-vs-tag",
+                source: `./examples/class-vs-tag.html`
+              });
+            </script>
+          </section>
+
+          <section id="inline-styles">
+            <script>
+              codeAlong({
+                title: "inline styles",
+                type: "document",
+                container: "inline-styles",
+                source: `./examples/inline-styles.html`
+              });
+            </script>
+          </section>
+
+          <section id="internal-styles">
+            <script>
+              codeAlong({
+                title: "internal styles",
+                type: "document",
+                container: "internal-styles",
+                source: `./examples/internal-styles.html`
+              });
+            </script>
+          </section>
+
+          <section id="css-selectors">
+            <script>
+              codeAlong({
+                title: "css selectors",
+                type: "document",
+                container: "css-selectors",
+                source: `./examples/css-selectors.html`
+              });
+            </script>
+          </section>
+
+          <section id="positioning">
+            <script>
+              codeAlong({
+                title: "positioning",
+                type: "document",
+                container: "positioning",
+                source: `./examples/positioning.html`
+              });
+            </script>
+          </section>
+        </section>
+
+        <section id="user-stories">
+          <section>
+            <h2>User Stories</h2>
+            <br />
+            <br />
+            <code>(~15 min)</code>
+          </section>
+          <section>
+            <h2>User Stories</h2>
+            <br />
+            <br />
+            <ul>
+              <li>What?</li>
+              <li>Why?</li>
+              <li>How?</li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              <a href="./user-stories-case-study.html" target="_blank">
+                Case Study
+              </a>
+            </h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Incremental Example</h2>
+            <br />
+            <br />
+            <p>Break into small groups to study this example</p>
+            <br />
+            <code>(~10 min)</code>
+          </section>
+          <section id="all-about-trees">
+            <script>
+              codeAlong({
+                title: "All About Trees",
+                container: "all-about-trees",
+                source: [
+                  "./all-about-trees/0-empty-boilerplate.html",
+                  "./all-about-trees/1-header-footer-dom.html",
+                  "./all-about-trees/2-header-footer-styles.html",
+                  "./all-about-trees/3-main-section-dom.html",
+                  "./all-about-trees/4-main-section-styles.html",
+                  "./all-about-trees/5-aside-dom.html",
+                  "./all-about-trees/6-aside-styles.html"
+                ]
+              });
+            </script>
+          </section>
+        </section>
+
+        <section id="using-git-branches">
+          <section>
+            <h2>Using Git Branches</h2>
+            <br />
+            <br />
+            <code>(~15 min)</code>
+          </section>
+          <section>
+            <h2>Git Branches</h2>
+            <br />
+            <br />
+            <ul>
+              <li>What?</li>
+              <li>Why?</li>
+              <li>How?</li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              <a
+                href="https://github.com/HackYourFutureBelgium/built-with-branches"
+                target="_blank"
+              >
+                Case Study
+              </a>
+            </h2>
+          </section>
+        </section>
+
+        <section id="code-along-project">
+          <section>
+            <h2>Code-Along Project</h2>
+            <br />
+            <br />
+            <code>(~60 min)</code>
+          </section>
+          <section>
+            <h2>Objectives:</h2>
+            <br />
+            <ul>
+              <li>Develop from a mock-up</li>
+              <li>Plan steps ahead of time</li>
+              <li>Start from an empty project</li>
+              <li>Develop each step on one branch</li>
+              <li>Use semantic HTML5 elements</li>
+              <li>Deploy before class ends</li>
+            </ul>
+          </section>
+          <section>
+            <h2>HTML5 Semantic Layout</h2>
+            <br />
+            <br />
+            <ul>
+              <li>What?</li>
+              <li>Why?</li>
+              <li>How?</li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              <a
+                href="https://github.com/hackyourfuturebelgium/tomato-timer-code-along"
+                >Starter Repo</a
+              >
+            </h2>
+          </section>
+        </section>
+
+        <section id="homework-launch">
+          <section>
+            <h2>Homework Launch</h2>
+            <br />
+            <p>Start the homework together, so you have no excuses :)</p>
+            <br />
+            <code>(~20 min)</code>
+          </section>
+          <section>
+            <h3>
+              <a
+                target="_blank"
+                href="https://github.com/hackyourfuturebelgium/homework-submission"
+              >
+                Homework Submission Process</a
+              >
+            </h3>
+            <br />
+            <ol>
+              <li>Create your week 1 issue</li>
+              <li>Add the issue to the module project</li>
+              <li>Create the repo for your project</li>
+              <li>Link to your project repo in the new issue</li>
+              <li>Fork the exercise repositories</li>
+              <li>Link also to them in the issue</li>
+              <li>
+                Sign in to
+                <a href="https://www.freecodecamp.org/" target="_blank"> FCC</a
+                >using GitHub
+              </li>
+              <li>Link your public profile to the issue</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Got all that?</h2>
+          </section>
+        </section>
+
+        <!-- if there is time -->
+        <!-- <section id="what-is-internet">
           <section>
             <h3>What is internet?</h3>
             <iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0"
@@ -484,52 +579,44 @@
           </section>
         </section> -->
 
-
-      <section id="thats-all">
-        <h2>Incremental Development</h2>
-        <br>
-        <p>Week 1</p>
-        <br>
-      </section>
-
-
+        <section id="thats-all">
+          <h2>Incremental Development</h2>
+          <br />
+          <p>Week 1</p>
+          <br />
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
 
-  <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      width: "100%",
-      height: "100%",
-      keyboard: {
-        // 27: function () {  }, // do something custom when ESC is pressed
-      },
-      dependencies: [
-        // { src: 'plugin/markdown/marked.js' },
-        // { src: 'plugin/markdown/markdown.js' },
-        // { src: './reveal.js/plugin/notes/notes.js', async: true },
-        // { src: './reveal.js/plugin/chalkboard/chalkboard.js' },
-        // { src: 'plugin/highlight/highlight.js', async: true }
-      ]
-    });
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: "100%",
+        height: "100%",
+        keyboard: {
+          // 27: function () {  }, // do something custom when ESC is pressed
+        },
+        dependencies: [
+          // { src: 'plugin/markdown/marked.js' },
+          // { src: 'plugin/markdown/markdown.js' },
+          // { src: './reveal.js/plugin/notes/notes.js', async: true },
+          // { src: './reveal.js/plugin/chalkboard/chalkboard.js' },
+          // { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+      });
 
-
-    Reveal.addEventListener('overviewshown', function (event) {
-      document.getElementById('footer-text').innerHTML = "ESC into slide";
-      document.getElementById('to-repo').style.visibility = 'visible';
-    });
-    Reveal.addEventListener('overviewhidden', function (event) {
-      document.getElementById('footer-text').innerHTML = "ESC to overview";
-      document.getElementById('to-repo').style.visibility = 'visible';
-    });
-
-
-
-  </script>
-</body>
-
+      Reveal.addEventListener("overviewshown", function(event) {
+        document.getElementById("footer-text").innerHTML = "ESC into slide";
+        document.getElementById("to-repo").style.visibility = "visible";
+      });
+      Reveal.addEventListener("overviewhidden", function(event) {
+        document.getElementById("footer-text").innerHTML = "ESC to overview";
+        document.getElementById("to-repo").style.visibility = "visible";
+      });
+    </script>
+  </body>
 </html>
