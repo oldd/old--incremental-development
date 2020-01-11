@@ -68,7 +68,7 @@ You will be assessed not only on your live demo, but also on the quality of your
 
 * A README describing the project and a report on what you struggled with, what you learned, and what skills you need to practice further.
 * One well-named branch per user story. If we check out any branch, it should contain _only_ the code necessary to make that step work. and it should work!
-* A file called `user-stories.md` in which you explain how you broke the project into steps, describe the step as a _user story_, and what you named the branch for that step.
+* A file called `development-strategy.md` in which you explain how you broke the project into user stories, describe each user story, and describe what code you wrote to implement this user story.  Check out the [tomato timer code-along](https://github.com/HackYourFutureBelgium/tomato-timer-code-along/blob/master/development-strategy.md) for an example.
 
 There are two general paths you can take to get this finished repo, neither is better or worse.  And if you find another way go for it!
 
@@ -98,6 +98,8 @@ There are 3 sets of exercises to start (and hopefully finish!).  One is on FreeC
 * Fork and Clone [css-exercises](https://github.com/dangodev/css-exercises)
   * Complete `exercise-1` and `exercise-2`
   * Push your work regularly, so you can ask questions with issues!
+
+Looking for an extra challenge? Try solving each exercise on a different branch!
 
 [TOP](#week-1)
 
