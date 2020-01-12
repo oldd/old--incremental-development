@@ -4,21 +4,21 @@
       "name": "acme-web-design",
       "live": true,
       "endpoints": [
-        "user-stories.md"
+        "development-strategy.md"
       ]
     },
     {
       "name": "app-theme",
       "live": true,
       "endpoints": [
-        "user-stories.md"
+        "development-strategy.md"
       ]
     },
     {
       "name": "duck-duck-clone",
       "live": true,
       "endpoints": [
-        "user-stories.md",
+        "development-strategy.md",
         "wireframe.md"
       ]
     }
