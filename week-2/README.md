@@ -55,7 +55,7 @@ This week you have 1 project, and 3 exercise sets.
 
 > [Code-Along](http://hackyourfuture.be/homework-submission/#projects)
 
-This week's project is to study the __Responsive Template__ tutorial from Traversy Media.
+This week's project is to study the __app-theme__ tutorial from Traversy Media.
 
 Writing the same code as Mr. Traversy's code is not enough!  You will be expected to submit your code from his tutorial in a new repository, cleanly organized with one branch per step.  It's up to you to decide what counts as a step.  Take a look through [this example project](https://github.com/HackYourFutureBelgium/built-with-branches) to get an idea of what an incrementally developed project looks like.  Be sure to also clone this repository and study it using GitKraken/VSC/Browser to explore what happens when you check out different branches.
 
@@ -87,9 +87,11 @@ There are 3 sets of exercises to start (and hopefully finish!).  One is on FreeC
   * Complete all 4 of FreeCodeCamp's [Responsive Web Design Principles](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/) challenges.
   * Turn on your public portfolio (if you haven't yet) so we can give feedback on your code
 * Fork and Clone [HTML-CSS-Practice-Problems](https://github.com/DevMountain/HTML-CSS-Practice-Problems) (if you haven't already):
+  * Turn on GitHub Pages
   * Complete the exercises in `./level-2`
   * Push your work regularly, so you can ask questions with issues!
 * Fork and Clone [css-exercises](https://github.com/dangodev/css-exercises)
+  * Turn on GitHub Pages
   * Complete `exercise-3`, `exercise-4` and `exercise-5`
   * Push your work regularly, so you can ask questions with issues!
 

@@ -66,9 +66,11 @@ But wait! Before you dive right in, take a minute to set up your homework on the
 There are 2 sets of exercises to start (and hopefully finish).
 
 * In [HTML-CSS-Practice-Problems](https://github.com/DevMountain/HTML-CSS-Practice-Problems):
+  * Turn on GitHub Pages
   * Complete the exercises in `./level-3`
   * Push your work regularly, so you can ask questions with issues!
 * In [css-exercises](https://github.com/dangodev/css-exercises)
+  * Turn on GitHub Pages
   * Complete `exercise-6` and `exercise-8`
   * Push your work regularly, so you can ask questions with issues!
 
