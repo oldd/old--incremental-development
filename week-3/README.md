@@ -1,5 +1,11 @@
 # Week 3
 
+* [Prep Work](#prep-work)
+* [Lesson Plan](#lesson-plan)
+* [Assignments](#assignments)
+
+---
+
 ## Prep Work
 
 ### WireFrames

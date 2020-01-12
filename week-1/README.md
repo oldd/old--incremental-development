@@ -2,6 +2,10 @@
 
 Prepare yourself, it's about to get real!
 
+* [Prep Work](#prep-work)
+* [Lesson Plan](#lesson-plan)
+* [Assignments](#assignments)
+
 ---
 
 ## Prep Work
