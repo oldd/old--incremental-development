@@ -1,4 +1,4 @@
-# Week 3
+# Week 3: Be Accessible
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)
@@ -7,6 +7,11 @@
 ---
 
 ## Prep Work
+
+### Accessibility
+
+* [ARIA landmark roles](https://www.youtube.com/watch?v=o4xHfi4t9S0&list=PLWjCJDeWfDdcEtSnqq_iGLKGA_H_3o3y7)
+* [Empathy Prompts](https://empathyprompts.net/)
 
 ### WireFrames
 

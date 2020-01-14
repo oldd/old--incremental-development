@@ -1,4 +1,4 @@
-# Week 2
+# Week 2: Be Responsive
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)
@@ -16,8 +16,6 @@
 ### HTML & CSS
 
 * [What is Responsive Design?](https://www.youtube.com/watch?v=5KGah8bW8GE)
-* [ARIA landmark roles](https://www.youtube.com/watch?v=o4xHfi4t9S0&list=PLWjCJDeWfDdcEtSnqq_iGLKGA_H_3o3y7)
-* [Empathy Prompts](https://empathyprompts.net/)
 
 ### Code Review
 

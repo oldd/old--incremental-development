@@ -1,4 +1,4 @@
-# Week 1
+# Week 1: Be Semantic
 
 Prepare yourself, it's about to get real!
 

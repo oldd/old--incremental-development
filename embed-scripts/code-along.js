@@ -30,7 +30,9 @@ async function codeAlong(config) {
     const fetchSource = async path => {
       try {
         const res = await fetch(path);
-        const code = res.text();
+        const preCode = await res.text();
+        console.log(preCode)
+        const code = preCode.replace(codeAlong.liveServerInjected, '');
         return code;
       } catch (err) {
         return err.name + ": " + err.message;
@@ -70,7 +72,7 @@ async function codeAlong(config) {
     }
   })();
 
-  console.log(steps)
+  // console.log(steps)
   // { iframe  }
   const setup = await codeAlong.setup(steps, config.title);
   container.appendChild(setup);
@@ -138,6 +140,7 @@ codeAlong.setup = async (steps, title) => {
     if (steps.length > 1) {
       const stepButtons = steps.map((step, index) => {
         const button = document.createElement('button');
+        button.style.height = '30px'; // provisoire
         const name = step.name ? step.name : 'step ' + index;
         button.innerHTML = name;
         // clear the results when tabs are switched
@@ -149,10 +152,10 @@ codeAlong.setup = async (steps, title) => {
           // console.clear();
           stepButtons.forEach(stepButton => {
             stepButton.innerHTML = stepButton.innerHTML
-              .replace('---&gt; ', '')
-              .replace(' &lt;---', '');
+              .replace('===&gt; ', '')
+              .replace(' &lt;===', '');
           })
-          button.innerHTML = '---> ' + button.innerHTML + ' <---';
+          button.innerHTML = '===> ' + button.innerHTML + ' <===';
 
           editor.setSession(step.session);
           outputEl.src = "data:text/html;charset=utf-8," + encodeURIComponent(editor.getValue());
@@ -169,7 +172,7 @@ codeAlong.setup = async (steps, title) => {
         }, document.createElement('div'));
       stepsContainer.appendChild(buttonsContainer);
 
-      steps[0].button.innerHTML = '---> ' + steps[0].name + ' <---';
+      steps[0].button.innerHTML = '===> ' + steps[0].name + ' <===';
     }
 
     stepsContainer.appendChild(editorContainer);
@@ -209,9 +212,9 @@ codeAlong.setup = async (steps, title) => {
     const outputContainer = document.createElement('div');
     outputContainer.style = 'height: 100vh; width: 40vw; border:solid 1px; padding-left:3%; padding-right:3%;';
     if (typeof title === 'string') {
-      const titleEl = document.createElement('h3');
+      const titleEl = document.createElement('h1');
       titleEl.innerHTML = title;
-      titleEl.style = 'text-align: center;';
+      titleEl.style = 'text-align: center; margin-bottom:0%; margin-top:1%;';
       outputContainer.appendChild(titleEl);
     }
     outputContainer.appendChild(buttonDiv);
@@ -231,6 +234,46 @@ codeAlong.setup = async (steps, title) => {
   return iframe;
 
 }
+
+// why this no work?
+codeAlong.liveServerInjected = `<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>`
 
 
 // {
