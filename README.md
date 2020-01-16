@@ -17,7 +17,6 @@ and each builds upon the previous version by adding user-visible functionality."
 * [Learning Objectives](#learning-objectives)
 * [About the Projects](#about-the-projects)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* [Study Links](https://study.hackyourfuture.be) (external)
 * Week 1: Be Semantic
   * [Prep Work](./week-1)
   * [Lesson Plan](https://hackyourfuture.be/incremental-development/week-1)
@@ -31,6 +30,8 @@ and each builds upon the previous version by adding user-visible functionality."
   * [Lesson Plan](https://hackyourfuture.be/incremental-development/week-3)
   * [Assignments](./week-3#assignments)
 * [Deeper Dives](./deeper-dives.md)
+* [Class Recordings](./class-recordings.md)
+* [Study Links](https://study.hackyourfuture.be) (external)
 
 ---
 

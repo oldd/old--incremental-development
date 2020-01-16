@@ -70,9 +70,9 @@ Writing the same code as Mr. Traversy's code is not enough!  You will be expecte
 
 You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, and the completeness of your repository. Your repository must contain:
 
-* A README describing the project and a report on what you struggled with, what you learned, and what skills you need to practice further.
+* A README describing your project in detail.  Check out these articles to learn more about writing good README's: [makeareadme.com](https://www.makeareadme.com/), [bulldogjob](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project), [meakaakka](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
 * One well-named branch per user story. If we check out any branch, it should contain _only_ the code necessary to make that step work. and it should work!
-* A file called `development-strategy.md` in which you explain how you broke the project into user stories, describe each user story, and describe what code you wrote to implement this user story.  Check out the [tomato timer code-along](https://github.com/HackYourFutureBelgium/tomato-timer-code-along/blob/master/development-strategy.md) for an example.
+* A file called `development-strategy.md` in which you explain how you broke the project into user stories, describe each user story, and describe what code you wrote to implement this user story _in detail_.  Check out the [tomato timer code-along](https://github.com/HackYourFutureBelgium/tomato-timer-code-along/blob/master/development-strategy.md) for an example.
 
 There are two general paths you can take to get this finished repo, neither is better or worse.  And if you find another way go for it!
 
@@ -87,7 +87,6 @@ But wait! Before you dive right in, take a minute to set up your homework on the
 1. Move it to the "In Progres" column of this module's project board.
 1. Open the [Responsive Layout](https://www.youtube.com/watch?v=Wm6CUkswsNw) tutorial.
 1. Begin coding!
-
 
 ### Exercises
 
