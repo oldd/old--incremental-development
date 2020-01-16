@@ -31,7 +31,6 @@ async function codeAlong(config) {
       try {
         const res = await fetch(path);
         const preCode = await res.text();
-        console.log(preCode)
         const code = preCode.replace(codeAlong.liveServerInjected, '');
         return code;
       } catch (err) {
