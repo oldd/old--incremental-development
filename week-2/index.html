@@ -80,7 +80,9 @@
 
       <section id="learning-objectives">
         <section>
-          <h2>Learning Objectives</h2>
+          <h2>Learning Objectives</h2><br>
+          <br>
+          <br>
           <p>
             What can you expect to cover in class today?
           </p>
@@ -97,23 +99,24 @@
             <li>Command Line</li>
           </ul>
         </section>
-        <!-- if there's time -->
-        <!-- <section>
-                        <h2>The Internet</h2>
-                        <br>
-                        <ul>
-                          <li>What is it?</li>
-                          <li>How does it work?</li>
-                          <li>What are web apps?</li>
-                        </ul>
-                      </section> -->
+        <section>
+          <h2>Responsive Design</h2>
+          <br>
+          <br>
+          <ul>
+            <li>DevTools R.D. Mode</li>
+            <li>Flexbox & Grid</li>
+            <li>Media Queries</li>
+          </ul>
+        </section>
       </section>
 
       <section id='review'>
         <h1>Review</h1>
         <br>
         <br>
-        <p>Revisit the last week's assignment and cover any questions you still have.</p>
+        <p>Any <code>ask-on-sunday</code> issues?</p>
+        <p>Any other Questions?</p>
         <br>
         <code>(~30 min)</code>
       </section>
@@ -122,29 +125,45 @@
         <h1>New Material</h1>
         <br>
         <br>
-        <p>An shallow introduction to what you will be learning this week.</p>
+        <p>An quick introduction to new concepts this week.</p>
+        <br>
         <br>
         <code>(~80 min)</code>
       </section>
 
-      <section id='responsive-css'>
+      <section id='testing-responsiveness'>
 
         <section>
-          <h2>Responsive CSS</h2>
+          <h2>Testing Responsiveness</h2>
           <br>
           <br>
-          <br>
-          <code>(~30 min)</code>
+          <p>Auto-adjusting layouts</p>
         </section>
 
-        <section>
-          <h2>words</h2>
+        <section id='grid'>
+          <h2>Browsers do this!</h2>
+          <br>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/" target='_blank'>
+                In Chrome/Chromium</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode" target='_blank'>
+                In Firefox</a></li>
+            <li><a href="http://responsivetesttool.com/" target='_blank'>
+                responsivetesttool.com</a></li>
+            <li><a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers"
+                target='_blank'>
+                Emulating other Browsers</a></li>
           </ul>
+        </section>
+      </section>
+
+      <section id='css-review'>
+
+        <section>
+          <h2>CSS Review</h2>
+          <br>
+          <br>
+          <p>Some key bits</p>
         </section>
 
         <section id='css-units'>
@@ -170,46 +189,159 @@
           </script>
         </section>
 
-        <section id='media-queries'>
+        <section id='float-clear'>
           <script>
             codeAlong({
-              title: 'Media Queries',
-              container: 'media-queries',
+              title: 'Float & Clear',
+              container: 'float-clear',
               source: [
                 {
-                  name: 'Aspect Ratio',
-                  path: './media-queries/aspect-ratio.html'
+                  name: ' Left ',
+                  path: './float-clear/left.html'
                 },
                 {
-                  name: 'Max & Min',
-                  path: './media-queries/max-min.html'
+                  name: ' Right ',
+                  path: './float-clear/right.html'
                 },
                 {
-                  name: '"and"',
-                  path: './media-queries/and.html'
+                  name: ' Both ',
+                  path: './float-clear/both.html'
                 },
                 {
-                  name: 'Commas',
-                  path: './media-queries/commas.html'
-                },
-                {
-                  name: 'Tricky',
-                  path: './media-queries/tricky.html'
+                  name: ' None ',
+                  path: './float-clear/none.html'
                 },
               ]
             })
           </script>
         </section>
 
+      </section>
+
+
+      <section id=flexbox-grid>
+
+        <section>
+          <h2>Flexbox & Grid</h2>
+          <br>
+          <br>
+          <p>Layouts adjust automatically</p>
+        </section>
+
         <section id='flexbox'>
           <h2>Flexbox</h2>
           <br>
+          <ul>
+            <li><a href="https://flexboxfroggy.com/" target='_blank'>Flexbox Froggy</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target='_blank'>
+                CSS Tricks</a></li>
+            <li><a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
+                target='_blank'>
+                MDN</a></li>
+          </ul>
+        </section>
+
+        <section id='grid'>
+          <h2>Grid</h2>
           <br>
-          <p><a href="https://flexboxfroggy.com/" target='_blank'>Flexbox Froggy</a></p>
+          <ul>
+            <li><a href="https://cssgridgarden.com/" target='_blank'>Grid Garden</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target='_blank'>
+                CSS Tricks: Grid</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target='_blank'>
+                MDN</a></li>
+            <li><a href="https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/"
+                target='_blank'>
+                Look Ma, no queries!</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='media-queries'>
+
+        <section>
+          <h2>@media</h2>
+          <br>
+          <br>
+          <p>Make decisions with CSS</p>
+        </section>
+
+        <section>
+          <h2>Readables</h2>
+          <br>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+                target='_blank'>
+                MDN: Using Media Queries</a></li>
+            <li><a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target='_blank'>
+                W3schools: Media Queries</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target='_blank'>
+                CSS Tricks: Queries for standard devices</a></li>
+            <li><a href="https://css-tricks.com/logic-in-media-queries/" target='_blank'>
+                CSS Tricks: Logic in media queries</a></li>
+          </ul>
+        </section>
+
+        <section id='media-queries-dimensions'>
+          <script>
+            codeAlong({
+              title: 'Media Queries: Dimensions',
+              container: 'media-queries-dimensions',
+              source: [
+                {
+                  name: ' Max & Min ',
+                  path: './media-queries-dimensions/max-min.html'
+                },
+                {
+                  name: ' Aspect Ratio (1) ',
+                  path: './media-queries-dimensions/aspect-ratio-1.html'
+                },
+                {
+                  name: ' Aspect Ratio (2) ',
+                  path: './media-queries-dimensions/aspect-ratio-2.html'
+                },
+                {
+                  name: ' Orientation ',
+                  path: './media-queries-dimensions/orientation.html'
+                }
+              ]
+            })
+          </script>
+        </section>
+
+        <section id='media-queries-operators'>
+          <script>
+            codeAlong({
+              title: 'Media Queries: Operators',
+              container: 'media-queries-operators',
+              source: [
+                {
+                  name: ' And ',
+                  path: './media-queries-operators/and.html'
+                },
+                {
+                  name: ' Commas ',
+                  path: './media-queries-operators/commas.html'
+                },
+                {
+                  name: ' Tricky ',
+                  path: './media-queries-operators/tricky.html'
+                },
+                {
+                  name: ' Not ',
+                  path: './media-queries-operators/not.html'
+                },
+                {
+                  name: ' Only ',
+                  path: './media-queries-operators/only.html'
+                },
+              ]
+            })
+          </script>
         </section>
 
       </section>
-
 
 
       <section id='review'>
@@ -219,23 +351,98 @@
         <code>(~20 min)</code>
       </section>
 
-      <section id='review'>
-        <h1>Code-Along</h1>
-        <br>
-        <br>
-        <p>Build a simple project together to see the new material in action.</p>
-        <br>
-        <code>(~80 min)</code>
+      <section id='code-along'>
+        <section>
+          <h1>Code-Along</h1>
+          <br>
+          <br>
+          <p>Build a simple project together to see the new material in action.</p>
+          <br>
+          <code>(~80 min)</code>
+        </section>
+
+        <section>
+          <h2>Objectives:</h2>
+          <br>
+          <ul>
+            <li>Cross-device mock-ups</li>
+            <li>Plan steps ahead of time</li>
+            <li>Start from an empty project</li>
+            <li>Develop each step on one branch</li>
+            <li>Pulling, Pushing & GitHub Pages</li>
+            <li>Build a responsive website</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Set-up</h2>
+          <br>
+          <br>
+          <ol>
+            <li><a href='https://github.com/HackYourFutureBelgium/responsive-code-along' target='_blank'>
+                Clone the repo</a></li>
+            <li>Open the project folder in VSC</li>
+            <li>Open <code>development-strategy.md</code> for planning</li>
+            <li>Open the mock-ups for easy reference</li>
+            <li>Open <code>index.html</code> in your VSC & Browser</li>
+            <li>Begin!</li>
+          </ol>
+        </section>
+
+
       </section>
 
 
-      <section id='review'>
-        <h1>Homework</h1>
-        <br>
-        <br>
-        <p>Set up your weekly issues and read over each assignment.</p>
-        <br>
-        <code>(~20 min)</code>
+      <section id='homework-prep'>
+        <section>
+          <h1>Homework Prep</h1>
+          <br>
+          <br>
+          <code>(~20 min)</code>
+        </section>
+
+        <section>
+          <h2><a href='https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-2'
+              target='_blank'>
+              The Assignments</a></h2>
+        </section>
+
+        <section>
+          <h3>A Little Change</h3>
+          <br>
+          <p>We now ask that you
+            <a href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+              target='_blank'>
+              assign</a>,
+            <a href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+              target='_blank'>
+              label</a>,
+            and <a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+              target='_blank'>
+              milestone</a>
+            your issues.
+          </p>
+          <br>
+          <p>
+            This will make it easier to find the issue you're looking for. <br>
+            It won't be long before you have over 100 in your repos!
+          </p>
+        </section>
+
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#weekly-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
+          <br>
+          <ol>
+            <li>Name it</li>
+            <li>Assign it</li>
+            <li>Label it</li>
+            <li>Milestone it</li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project</li>
+          </ol>
+        </section>
       </section>
 
       <section id='cover-slide'>
@@ -246,7 +453,7 @@
         <p>
           hit "s" for speaker notes
         </p>
-        <a href="htt ps://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-2">-- back to
+        <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-2">-- back to
           repo -- </a>
       </section>
 

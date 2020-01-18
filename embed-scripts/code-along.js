@@ -114,7 +114,7 @@ codeAlong.setup = async (steps, title) => {
 
     const ace = iframe.contentWindow.ace;
     const editor = ace.edit(editorContainer);
-    editor.setTheme('ace/theme/dracula');
+    editor.setTheme('ace/theme/twilight');
     editor.setFontSize(12);
     editor.getSession().setMode('ace/mode/html');
     editor.getSession().setTabSize(2);

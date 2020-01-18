@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Aspect Ratio</title>
+  <title>Only</title>
   <meta charset='utf-8'>
 
   <!-- Psst. click "inspect in a new tab" -->
@@ -12,12 +12,18 @@
       width: 100vw;
       color: white;
       font-size: 4em;
-      background-color: blue;
+      background-color: red;
     }
 
-    @media (aspect-ratio: 1/1) {
+    @media only screen and (orientation: portrait) and (min-width:300px) {
       .responsive-thing {
-        background-color: red;
+        background-color: black;
+      }
+    }
+
+    @media only screen and (orientation: landscape) and (min-height:300px) {
+      .responsive-thing {
+        background-color: blue;
       }
     }
   </style>
