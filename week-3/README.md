@@ -62,7 +62,7 @@ You will be assessed not only on your live demo, but also on the quality of your
 But wait! Before you dive right in, take a minute to set up your homework on the module project board:
 
 1. Start an empty repository called ```duck-duck-clone``` (Named _exactly_ this!)
-1. Create an issue for this week's project & exercises, then move it to the board.
+1. Create an issue for this week's project [just like this](https://github.com/HackYourFutureBelgium/homework-submission#homework-issues)
 1. Open [DuckDuckGo](https://duckduckgo.com)
 1. Get started!
 
