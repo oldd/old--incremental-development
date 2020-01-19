@@ -62,7 +62,7 @@ This week you have 1 project, and 3 exercise sets.
 
 ### Project
 
-> [Code-Along](http://hackyourfuture.be/homework-submission/#projects)
+> [Code-Along](http://github.com/hackyourfuturebelgium/homework-submission/#projects)
 
 This week's project is to study the __acme-web-design__ tutorial from Traversy Media.
 
