@@ -56,6 +56,15 @@
         "exercise-7",
         "exercise-8"
       ]
+    },
+    {
+      "name": "html-css-git-exercises",
+      "live": true,
+      "endpoints": [
+        "week-1",
+        "week-2",
+        "week-3"
+      ]
     }
   ]
 }

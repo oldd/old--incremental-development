@@ -43,32 +43,34 @@ This week there is 1 project, and 2 exercise sets.
 
 ### Project
 
-> [Code-Along](http://hackyourfuture.be/homework-submission/#projects)
+> [Open-Ended](http://hackyourfuture.be/homework-submission/#projects)
 
 This week's project is to build your own accessible & responsive clone of the [DuckDuckGo home page](https://duckduckgo.com).  We don't expect your DOM to be identical to DuckDuckGo's, but the rendered site should be visually as close as possible. Unlike the last two weeks, this project does not have a video tutorial for you to follow.  You're on your own! Here are some skills that will come in handy:
+
 * [Finding which colors a website uses](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors)
 * [Which fonts a website uses](https://wpshout.com/quick-guides/how-to-see-what-fonts-a-website-is-using/)
 * [Which images a website uses](https://www.lifewire.com/copy-image-web-address-url-1174175)
 
-You will be expected to turn in your code for this project on a new repository, cleanly developed with __one branch per page section__.  Take a look through [this example repository](https://github.com/HackYourFutureBelgium/built-with-branches) to get an idea of what an incrementally developed project looks like.  Be sure to also clone this repository and study it using GitKraken/VSC/Browser to explore what happens when you check out different branches.
+You will be expected to turn in your code for this project in a clone/fork of [this repository](https://github.com/HackYourFutureBelgium/duck-duck-clone/), cleanly developed with __one branch per page section__.  Take a look through [this example repository](https://github.com/HackYourFutureBelgium/built-with-branches) to get an idea of what an incrementally developed project looks like.  Be sure to also clone this repository and study it using GitKraken/VSC/Browser to explore what happens when you check out different branches.
 
-You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, and the completeness of your repository. Your repository must contain:
+This week you will also expected to have entirely _correct_ and _accessible_ HTML & CSS. Your coaches will be using the validation buttons on your deployed page, and the accessibility audit build into Chrome Devtools to check for any mistakes.  Since these tools are also available to you, you will be able find and fix any errors on your own before submission. Any validation errors left when you submit your work will land your project in "NEEDS REVISION".
+
+Your repository must contain:
 
 * A README describing your project in detail.  Check out these articles to learn more about writing good README's: [makeareadme.com](https://www.makeareadme.com/), [bulldogjob](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project), [meakaakka](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
 * One well-named branch per user story. If we check out any branch, it should contain _only_ the code necessary to make that step work. and it should work!
 * A file called `development-strategy.md` in which you explain how you broke the project into user stories, describe each user story, and describe what code you wrote to implement this user story.  Check out the [tomato timer code-along](https://github.com/HackYourFutureBelgium/tomato-timer-code-along/blob/master/development-strategy.md) for an example.
-* A file called `wireframe.md` that will include an explanation and a link to your wireframe saved on [wireframe.cc](https://wireframe.cc).
+* Include your _wireframe_ in the `development-strategy.md` along with a little explanation of why you made it like you did.  You can either include a link if you use [wireframe.cc](https://wireframe.cc), or upload an image if you use another tool.
 
 But wait! Before you dive right in, take a minute to set up your homework on the module project board:
 
-1. Start an empty repository called ```duck-duck-clone``` (Named _exactly_ this!)
-1. Create an issue for this week's project & exercises, then move it to the board.
-1. Open [DuckDuckGo](https://duckduckgo.com)
-1. Get started!
+1. Clone [duck-duck-clone](https://github.com/HackYourFutureBelgium/duck-duck-clone/)
+1. [Create a homework issue](https://github.com/HackYourFutureBelgium/homework-submission#homework-issues) if you haven't yet.
+1. Get coding!
 
 ### Exercises
 
-There are 2 sets of exercises to start (and hopefully finish).
+There are 3 sets of exercises to start (and probably not finish, there's a lot this week).
 
 * In [HTML-CSS-Practice-Problems](https://github.com/DevMountain/HTML-CSS-Practice-Problems):
   * Turn on GitHub Pages
@@ -77,6 +79,10 @@ There are 2 sets of exercises to start (and hopefully finish).
 * In [css-exercises](https://github.com/dangodev/css-exercises)
   * Turn on GitHub Pages
   * Complete `exercise-6` and `exercise-8`
+  * Push your work regularly, so you can ask questions with issues!
+* Fork & Clone [html-css-git-exercises](https://github.com/CodeYourFuture/html-css-git-exercises)
+  * Turn on GitHub Pages
+  * Begin the exercises.  There is no specific assignment, just a lot more practice available to keep your HTML/CSS sharp throughout the next modules
   * Push your work regularly, so you can ask questions with issues!
 
 Looking for an extra challenge? Try solving each exercise on a different branch!
