@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>wk 13: Incremental Development</title>
+  <title>wk 3: Incremental Development</title>
 
   <script src='../embed-scripts/code-along.js'></script>
 
@@ -64,59 +64,404 @@
           repo -- </a>
       </section>
 
-      <!-- how to use speaker notes
-            things that will not distracted if opened
-            bigger picture advice can be in the for-coaches file
-            only things that would help someone reading it on the fly
-      -->
+      <section id='about-today'>
+        <h1>About Today</h1>
+        <br>
+        <br>
+        <p>Learning Objectives, Announcements, Installations</p>
+        <br>
+        <code>(~10 min)</code>
+      </section>
 
-      <!-- learning objectives
-              accessibility
-                types of accessibility
-                use semantic elements
-                use aria labels
-                audit your code
-                inspect the reader-visible dom
-                think of contrast
-                try navigating with assistive technologies
-              recreating from inspection
-                copying styles
-                reading colors from screen
-                writing html from dom
-                finding image source -->
-      <!-- installs: accessibility extensions in chrome/chromium
-              Wave (overlays the screen): https://wave.webaim.org/extension/
-              aXe (tab in devtools): https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/, https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
-              chromeVox (chrome/ium): https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn
-              vsc extension: https://github.com/mvdschee/web-accessibility
-              a11y (find link, safari?)
-              ? https://www.accessibilityoz.com/products/screen-reader-view-firefox-extension/
-              they've done a linter? -->
-      <!-- review time -->
-      <!-- new material -->
-      <!-- accessibility
-              accisibilites
-                human - empathy prompts
-                technical - throttling & device simulation
-              more about it
-                types of it link
-                talking about how he uses screen reader  (7:45): https://www.youtube.com/watch?v=7Rs3YpsnfoI
-                showing how he uses one: https://www.youtube.com/watch?v=dEbl5jvLKGQ
-                screen readers: https://www.youtube.com/watch?v=Lktz1KXbTOU
-              scoring your page
-                - find some sites to analyze. google & duckduck?
-                https://web.dev/accessibility-scoring/
-                lighthouse (in chrome): https://developers.google.com/web/tools/lighthouse#devtools
-                aXe, in both
-                 -->
-      <!-- ARIA
-              what is it
-                https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
-              accessibility tree in firefox
-                https://hacks.mozilla.org/2019/10/auditing-for-accessibility-problems-with-firefox-developer-tools/
-              code-along examples  -->
+      <section id="learning-objectives">
+        <section>
+          <h2>Learning Objectives</h2><br>
+          <br>
+          <br>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+        </section>
+        <section>
+          <h3>Accessible Design</h3>
+          <br>
+          <ul>
+            <li>What is accessible? What is not?</li>
+            <li>Auditing website accessibility</li>
+            <li>Simulating accessibility issues</li>
+            <li>Using assistive navigation tools</li>
+            <li>Inspecting the Accessibility Tree</li>
+            <li>Using ARIA to define the Acc. Tree</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Reverse-Engineering Sites</h3>
+          <br>
+          <ul>
+            <li>Replicating page layout</li>
+            <li>Copying a site's styles</li>
+            <li>Finding and using site assets</li>
+            <li>Matching site fonts</li>
+          </ul>
+        </section>
+      </section>
 
-      <!-- break -->
+      <section id="installations">
+        <section>
+          <h2>Installations</h2>
+          <br>
+          <p>Tools to help understand and develop for accessibility.</p>
+        </section>
+        <section>
+          <h2>Accessibility Inspectors</h2>
+          <br>
+          <ul>
+            <li><a href="https://wave.webaim.org/extension/" target='_blank'>
+                Wave</a></li>
+            <li>
+              Tota11y:
+              <a href="https://chrome.google.com/webstore/detail/tota11y-toolkit-chrome-ex/plgldjckfjonhhaflbghkdmbcmffccpn"
+                target='_blank'>
+                Chrome/Chromium</a>
+              <a href="https://addons.mozilla.org/en-US/firefox/addon/tota11y-accessibility-toolkit/?src=search"
+                target='_blank'>
+                Firefox</a>
+            </li>
+            <li>
+              a11y:
+              <a href="https://developer.chrome.com/extensions/a11yn" target='_blank'>
+                Chrome/Chromium</a>
+              <a href=" https://addons.mozilla.org/en-US/firefox/addon/a11y-outline/" target='_blank'>
+                Firefox</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Experiencing Accessibility</h3>
+          <br>
+          <ul>
+            <li>
+              NoCoffee:
+              <a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US"
+                target='_blank'>
+                Chrome/Chromium</a>
+              <a href="https://addons.mozilla.org/en-US/firefox/addon/nocoffee/" target='_blank'>
+                Firefox</a>
+            </li>
+            <li><a
+                href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn"
+                target='_blank'>
+                ChromeVox</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>VSC Plugins</h3>
+          <br>
+          <ul>
+            <li><a href="https://github.com/mvdschee/web-accessibility" target='_blank'>
+                Web Accessibility</a></li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='review'>
+        <h1>Review</h1>
+        <br>
+        <br>
+        <p>Any <code>ask-on-sunday</code> issues?</p>
+        <p>Any other Questions?</p>
+        <br>
+        <code>(~70 min)</code>
+      </section>
+
+      <section id='review'>
+        <h1>New Material</h1>
+        <br>
+        <br>
+        <p>An quick introduction to new concepts this week.</p>
+        <br>
+        <br>
+        <code>(~40 min)</code>
+      </section>
+
+      <section id='what-is-accessibility'>
+
+        <section>
+          <h2>What is Accessibility?</h2>
+          <br>
+          <p>Making sure your website work for everyone.</p>
+        </section>
+        <section>
+          <h3>Human Access</h3>
+          <br>
+          <p>
+            <a href="https://empathyprompts.net/#blindness" target='_blank'>
+              Empathy Prompts</a>
+          </p>
+        </section>
+        <section>
+          <h3>Technological Access</h3>
+          <br>
+          <p>
+            <a href="https://blog.j-labs.pl/index.php?page=2019/08/Testing-and-simulating-mobile-devices-in-Chrome-DevTools"
+              target='_blank'>
+              Throttling & Emulation</a>
+          </p>
+        </section>
+        <section>
+          <h3>Further Reading</h3>
+          <br>
+          <ul>
+            <li><a href='https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility'
+                target='_blank'>
+                What is Accessibility?</a></li>
+            <li><a href='https://www.youtube.com/watch?v=dEbl5jvLKGQ' target='_blank'>
+                Using a screen reader</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='accessibility-tree'>
+        <section>
+          <h2>ARIA</h2>
+          <br>
+          <p>Accessible Rich Internet Applications</p>
+        </section>
+        <section>
+          <h3><a href='https://www.youtube.com/watch?v=rvYXa2nGE04' target='_blank'>A quick video intro</a></h3>
+        </section>
+        <section>
+          <h3>What is ARIA?</h3>
+          <br>
+          <ol>
+            <li>It is specialized attributes in HTML</li>
+            <li>Like CSS but for the accessibility tree</li>
+            <li>Adds a layer of description over your HTML</li>
+            <li>It modifies how readers interpret the DOM</li>
+            <li><a href='https://www.w3.org/TR/wai-aria-practices-1.1/#no_aria_better_bad_aria' target='_blank'>
+                No ARIA is better than bad ARIA!
+              </a></li>
+          </ol>
+        </section>
+        <section>
+          <h3>Accessibility Inspector</h3>
+          <br>
+          <ol>
+            <li>Open Firefox Devtools</li>
+            <li>Turn on the "Accessibility" tab</li>
+            <li>Thats the Accessibility Tree!</li>
+            <li>It's how Screen Readers understand a website</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Further Study</h3>
+          <br>
+          <ul>
+            <li><a href='https://www.youtube.com/watch?v=7mqqgIxX_NU' target='_blank'>Using Firefox's Accessibility
+                Inspector</a></li>
+            <li><a
+                href='https://hacks.mozilla.org/2019/10/auditing-for-accessibility-problems-with-firefox-developer-tools/'
+                target='_blank'>Auditing Accessibility with FireFox</a></li>
+            <li><a href='https://web.dev/accessibility-scoring/' target='_blank'>
+                Accessibility Scoring</a></li>
+            <li><a href='https://study.hackyourfuture.be/web-accessibility' target='_blank'>
+                study.hackyourfuture.be/web-accessibility</a></li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='aria-code-along-examples'>
+        <section>
+          <h2>ARIA Examples</h2>
+          <br>
+          <p>Getting a feel for accessible HTML</p>
+        </section>
+        <section>
+          <h3>Code-Along Code</h3>
+          <br>
+          <ol>
+            <li>Clone and open <a href='https://github.com/hackyourfuturebelgium/accessible-code-along' target='_blank'>
+                this repository</a>
+            </li>
+            <li>Open FireFox Accessibility Inspector</li>
+            <li>Code along!</li>
+          </ol>
+          <aside class='notes'>
+            This week's code-along is in a separate repository because the accessibility tree inspector does not play
+            nicely with the embedded code-along tool. It will be best to clone the repo and open the examples
+            individually for code-along.
+            <br>
+            <br>
+            this is the same repository you will use as a starter for the main code-along
+          </aside>
+        </section>
+      </section>
+
+      <section id='practical-tips'>
+        <section>
+          <h2>Practical Tips</h2>
+          <br>
+          <p>Ideas for improving your accessible development</p>
+        </section>
+        <section>
+          <h3>Plan for accessibility</h3>
+          <br>
+          <p><a href='https://www.youtube.com/watch?v=3w7imFuXD8k' target='_blank'>
+              Good design is accessible design (short video)</a>
+          </p>
+        </section>
+        <section>
+          <h3>Start at the source</h3>
+          <br>
+          <ul>
+            <li>Use The Web Accessibility plugin for VSC</li>
+            <li>Write semantic HTML</li>
+            <li>Always use the right tag</li>
+            <li>Keep your HTML as simple as possible</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Inspect & Audit</h3>
+          <br>
+          <ul>
+            <li>Turn on firefox's <a
+                href='https://hacks.mozilla.org/2019/10/auditing-for-accessibility-problems-with-firefox-developer-tools/'
+                target='_blank'>accessibility tree inspector</a></li>
+            <li>Test your site with <a href='https://developers.google.com/web/tools/lighthouse/'
+                target='_blank'>Chrome/ium's Lighthouse audit</a></li>
+            <li>Use extensions like <code>Wave</code> or <code>tota11y</code></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Test it yourself!</h3>
+          <br>
+          <ul>
+            <li>
+              Use your site with noCoffee or a screen reader.
+            </li>
+            <li>
+              Emulate a tiny phone with slow internet.
+            </li>
+            <li><a
+                href="https://sumtips.com/software/browsers/turn-off-css-on-a-specific-website-in-browser-for-testing/"
+                target='_blank'>
+                Disable CSS</a></li>
+            <li>Try navigating with only your keyboard.</li>
+            <li>Use your computer's Screen Reader</li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='review'>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
+      </section>
+
+      <section id='code-along'>
+        <section>
+          <h1>Code-Along</h1>
+          <br>
+          <p>Build a simple project together to see the new material in action.</p>
+          <br>
+          <code>(~80 min)</code>
+
+          <aside class='notes'>
+            <p>
+              for this second part of class, take the time to cover whatever the students need most. It's not a rush
+              to
+              finish the project
+            </p>
+            <p>
+              Take plenty of time to cover the committing, branching & push/pulling. If you need to pause and do extra
+              examples on Git or anything else that is great
+            </p>
+            <p>
+              if you're feeling that the project is moving too fast, it can help to pause from coding together. Have
+              them work together in small groups, walk around, answer their questions, then get back to group coding.
+            </p>
+            <p>students find it very helpful if you record this part of class</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Objectives:</h2>
+          <br>
+          <ul>
+            <li>Start from an empty project</li>
+            <li>Reverse-engineer a design from an existing site</li>
+            <li>Creating a wireframe</li>
+            <li>Plan steps, developing each on a branch</li>
+            <li>Use semantic HTML5 elements & ARIA</li>
+            <li>Use Accessibility tools to inspect and audit</li>
+            <li>Pulling, Pushing & GitHub Pages</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Set-up</h2>
+          <br>
+          <ol>
+            <li>clone<a href='https://github.com/hackyourfuturebelgium/accessible-code-along' target='_blank'>
+                this repo</a> (if you haven't yet)</li>
+            <li>Open the project folder in VSC</li>
+            <li>Open <code>development-strategy.md</code> for planning</li>
+            <li>Open Google for reverse-engineering</li>
+            <li>Open <code>index.html</code> & <code>style.css</code> in VSC</li>
+            <li>Open them in Firefox & enable the Accessibility tools</li>
+            <li>Begin!</li>
+          </ol>
+          <aside class='notes'>
+            It is important everyone uses firefox or they won't be able to inspect the accessibility tree.
+          </aside>
+        </section>
+
+      </section>
+
+
+      <section id='homework-prep'>
+        <section>
+          <h1>Homework Prep</h1>
+          <br>
+          <br>
+          <code>(~20 min)</code>
+        </section>
+
+        <section>
+          <h2><a href='https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-3'
+              target='_blank'>
+              The Assignments</a></h2>
+        </section>
+
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#weekly-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
+          <br>
+          <ol>
+            <li>Name it something helpful</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+                target='_blank'>
+                Assign</a>, it to yourself</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+                target='_blank'>
+                Label</a>, it <code>week-2</code></li>
+            <li><a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+                target='_blank'>
+                Milestone</a> it <code>incremental-development</code></li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project</li>
+          </ol>
+        </section>
+      </section>
+
+
 
       <!-- code-along: replicate https://www.google.com/
           - notes
@@ -127,12 +472,19 @@
             using gitkraken helps students to follow along with gitting. even if you struggle a bit to find the buttons it will still be more helpful to them than command line
             suggested to use firefox for the accessibility tree tab in it's devtools
             a good and simple site for building wireframes together: wireframe.cc
-          build a wireframe (no need to introduce this before)
+
           inspecting & copying styles
           finding images and fonts
-          testing accessibility -->
-
-      <!-- homework launch -->
+          testing accessibility
+            try your computer's voiceover
+            the extensions installed earlier
+            the audits
+            nocoffee
+            using only arrow keys, tab, shift/tab & enter
+          use the accisibility nspector
+            use firefox
+            open examples in new tab
+          -->
 
 
       <section id='cover-slide'>

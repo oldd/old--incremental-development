@@ -73,7 +73,7 @@ async function codeAlong(config) {
 
   // console.log(steps)
   // { iframe  }
-  const setup = await codeAlong.setup(steps, config.title);
+  const setup = await codeAlong.setup(steps, config);
   container.appendChild(setup);
 
 
@@ -82,7 +82,8 @@ async function codeAlong(config) {
 
 }
 
-codeAlong.setup = async (steps, title) => {
+codeAlong.setup = async (steps, config) => {
+  const title = config.title;
 
   const result = {};
 
@@ -121,7 +122,23 @@ codeAlong.setup = async (steps, title) => {
 
 
     if (steps.length === 0) {
-      const defaultCode = "// https://developer.mozilla.org/en-US/docs/Web/API/Console/assert\n" +
+      const defaultCode = config.type === 'document'
+        ? `<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Code Along</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+`
+        : "// https://developer.mozilla.org/en-US/docs/Web/API/Console/assert\n" +
         "console.assert(true, 'passing assert');\n" +
         "console.assert(false, 'failing assert');\n" +
         "\n// psst. Open your console for logging!";
@@ -157,7 +174,7 @@ codeAlong.setup = async (steps, title) => {
           button.innerHTML = '===> ' + button.innerHTML + ' <===';
 
           editor.setSession(step.session);
-          outputEl.src = "data:text/html;charset=utf-8," + encodeURIComponent(editor.getValue());
+          outputEl.src = "data:text/html," + editor.getValue();
 
         }
         step.button = button;
@@ -188,7 +205,7 @@ codeAlong.setup = async (steps, title) => {
     };
 
     const newTabButton = document.createElement('button');
-    newTabButton.innerHTML = 'inspect in new tab';
+    newTabButton.innerHTML = 'inspect/debug in new tab';
     newTabButton.onclick = () => {
       const x = window.open();
       x.document.open();
@@ -204,7 +221,9 @@ codeAlong.setup = async (steps, title) => {
 
 
     const outputEl = document.createElement('iframe');
-    outputEl.style = "width:37vw;height:82vh;margin-right:3%;";
+    config.title
+      ? outputEl.style = "width:100%;height:85%;"
+      : outputEl.style = "width:100%;height:90%;";
     outputEl.id = '\n-- study: rendered DOM --\n';
     outputEl.src = "data:text/html;charset=utf-8," + encodeURIComponent(steps[0].code);
 
@@ -213,7 +232,7 @@ codeAlong.setup = async (steps, title) => {
     if (typeof title === 'string') {
       const titleEl = document.createElement('h1');
       titleEl.innerHTML = title;
-      titleEl.style = 'text-align: center; margin-bottom:0%; margin-top:1%;';
+      titleEl.style = 'text-align: center; padding-bottom:0%;margin-bottom:0%; margin-top:1%;';
       outputContainer.appendChild(titleEl);
     }
     outputContainer.appendChild(buttonDiv);
@@ -273,32 +292,5 @@ codeAlong.liveServerInjected = `<!-- Code injected by live-server -->
 	}
 	// ]]>
 </script>`
-
-
-// {
-//   const configSchema = {
-//     container: 'string, element, empty',
-//     title: 'string, to become a main header',
-//     source: 'undefined -> empty code-along. string -> fetch from relative path. object -> name & path. array of strings or objects -> tabbed the-previous-things'
-//   }
-
-//   const resultSchema = {
-//     config: 'the unmodified config object',
-//     container: "element with input & output containers",
-//     editor: 'ace editor',
-//     resultsEl: 'coupler',
-//     active: "the active step object",
-//     steps: {
-//       type: 'array',
-//       description: 'if no steps, empty editor/results. if 1 step, no tabs. if 2+ steps, tab-it',
-//       items: {
-//         path: "relative path to file",
-//         code: "the code",
-//         session: "ace session",
-//         name: "given or default name "
-//       }
-//     }
-//   }
-// }
 
 

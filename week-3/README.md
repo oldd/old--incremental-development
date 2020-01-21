@@ -45,11 +45,7 @@ This week there is 1 project, and 2 exercise sets.
 
 > [Open-Ended](http://hackyourfuture.be/homework-submission/#projects)
 
-This week's project is to build your own accessible & responsive clone of the [DuckDuckGo home page](https://duckduckgo.com).  We don't expect your DOM to be identical to DuckDuckGo's, but the rendered site should be visually as close as possible. Unlike the last two weeks, this project does not have a video tutorial for you to follow.  You're on your own! Here are some skills that will come in handy:
-
-* [Finding which colors a website uses](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors)
-* [Which fonts a website uses](https://wpshout.com/quick-guides/how-to-see-what-fonts-a-website-is-using/)
-* [Which images a website uses](https://www.lifewire.com/copy-image-web-address-url-1174175)
+This week's project is to build your own accessible & responsive clone of the [DuckDuckGo home page](https://duckduckgo.com).  We don't expect your DOM to be identical to DuckDuckGo's, but the rendered site should be visually as close as possible. Unlike the last two weeks, this project does not have a video tutorial for you to follow.  You're on your own!
 
 You will be expected to turn in your code for this project in a clone/fork of [this repository](https://github.com/HackYourFutureBelgium/duck-duck-clone/), cleanly developed with __one branch per page section__.  Take a look through [this example repository](https://github.com/HackYourFutureBelgium/built-with-branches) to get an idea of what an incrementally developed project looks like.  Be sure to also clone this repository and study it using GitKraken/VSC/Browser to explore what happens when you check out different branches.
 
@@ -66,6 +62,7 @@ But wait! Before you dive right in, take a minute to set up your homework on the
 
 1. Clone [duck-duck-clone](https://github.com/HackYourFutureBelgium/duck-duck-clone/)
 1. [Create a homework issue](https://github.com/HackYourFutureBelgium/homework-submission#homework-issues) if you haven't yet.
+1. Open up [duckduckgo.com](https://duckduckgo.com)
 1. Get coding!
 
 ### Exercises
