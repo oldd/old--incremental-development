@@ -82,8 +82,7 @@ There are two general paths you can take to get this finished repo, neither is b
 But wait! Before you dive right in, take a minute to set up your homework on the module project board:
 
 1. Start an empty repository called ```acme-web-design``` (Named _exactly_ this!)
-1. Create an issue for this week's project in your class repo
-    * ```YourName: week 1 - incremental development```
+1. Create an issue for this week's project [just like this](https://github.com/HackYourFutureBelgium/homework-submission#homework-issues)
 1. Move it to the "In Progres" column of this module's project board.
 1. Open the [Responsive Layout](https://www.youtube.com/watch?v=Wm6CUkswsNw) tutorial.
 1. Begin coding!
