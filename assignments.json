@@ -18,8 +18,7 @@
       "name": "duck-duck-clone",
       "live": true,
       "endpoints": [
-        "development-strategy.md",
-        "wireframe.md"
+        "development-strategy.md"
       ]
     }
   ],
