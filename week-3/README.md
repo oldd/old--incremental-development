@@ -49,7 +49,7 @@ This week's project is to build your own accessible & responsive clone of the [D
 
 You will be expected to turn in your code for this project in a clone/fork of [this repository](https://github.com/HackYourFutureBelgium/duck-duck-clone/), cleanly developed with __one branch per page section__.  Take a look through [this example repository](https://github.com/HackYourFutureBelgium/built-with-branches) to get an idea of what an incrementally developed project looks like.  Be sure to also clone this repository and study it using GitKraken/VSC/Browser to explore what happens when you check out different branches.
 
-This week you will also expected to have entirely _correct_ and _accessible_ HTML & CSS. Your coaches will be using the validation buttons on your deployed page, and the accessibility audit build into Chrome Devtools to check for any mistakes.  Since these tools are also available to you, you will be able find and fix any errors on your own before submission. Any validation errors left when you submit your work will land your project in "NEEDS REVISION".
+This week you will also expected to have entirely _correct_ and _accessible_ HTML & CSS including correct Semantic HTML and ARIA. Your coaches will be using the validation buttons on your deployed page, FireFox's Accessibility inspector, and the accessibility audit build into Chrome Devtools to check for any mistakes.  Since these tools are also available to you, you will be able find and fix any errors on your own before submission. Any validation errors left when you submit your work will land your project in "NEEDS REVISION".
 
 Your repository must contain:
 
