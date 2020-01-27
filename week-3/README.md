@@ -39,7 +39,7 @@ This module's main objective is to learn how Git & GitHub can be used to organiz
 
 ## Assignments
 
-This week there is 1 project, and 2 exercise sets.
+This week there is 1 project, and 3 exercise sets.
 
 ### Project
 
