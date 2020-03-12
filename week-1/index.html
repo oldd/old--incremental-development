@@ -7,23 +7,12 @@
 
   <title>wk 1: Incremental Development</title>
 
-  <script src='../embed-scripts/code-along.js'></script>
+  <script src='../dependencies/code-along.js'></script>
 
-  <link rel="stylesheet" href="../reveal.js/css/reset.css">
-  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/theme/night.css">
 
-  <!-- Theme used for syntax highlighting of code -->
-  <!-- <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css"> -->
-
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = '../reveal.js/stylesheet';
-    link.type = '../reveal.js/text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
 
   <style>
     /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
@@ -42,22 +31,37 @@
   <div class="reveal">
 
     <div class='footer'>
-      <code id="footer-text">ESC to overview</code>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/encapsulation" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
       <br>
-      <a id='to-repo' style='visibility:hidden'
-        href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target="_blank">
-        <code>module repository</code>
-      </a>
+      <code id="footer-text">ESC to overview</code>
     </div>
 
     <div class="slides">
 
-      <section id='cover-slide'>
+      <section id='top-slide'>
         <h3>Incremental Development</h3>
         <br>
         <h2>Week 1: Be Semantic</h2>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1">(back to repo)</a>
+        <p>
+          "<code>s</code>" for speaker notes
+          <!-- <br>
+                        "<code>b</code>" for chalkboard -->
+        </p>
+        <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target='_blank'>
+          -- back to repo --
+        </a>
       </section>
 
       <section id="learning-objectives">
@@ -68,16 +72,6 @@
           </p>
           <br>
           <code>(~5 min)</code>
-        </section>
-        <section>
-          <h2>Git & GitHub</h2>
-          <br>
-          <ul>
-            <li>Practice with Pull Requests</li>
-            <li>Practice cloning, pushing & pulling</li>
-            <li>How to use Issues for Code Reviews</li>
-            <li>Creating and merging branches</li>
-          </ul>
         </section>
         <section>
           <h2>Document Life-Cycle</h2>
@@ -100,104 +94,21 @@
           </ul>
         </section>
         <section>
-          <h2>So many softwares!</h2>
+          <h2>Git & GitHub</h2>
           <br>
           <ul>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>GitKraken</li>
-            <li>Visual Studio Code</li>
-            <li>Browser</li>
-            <li>Command Line</li>
+            <li>Practice cloning, pushing & pulling</li>
+            <li>Creating, merging & pushing branches</li>
           </ul>
         </section>
-        <!-- if there's time -->
-        <!-- <section>
-                  <h2>The Internet</h2>
-                  <br>
-                  <ul>
-                    <li>What is it?</li>
-                    <li>How does it work?</li>
-                    <li>What are web apps?</li>
-                  </ul>
-                </section> -->
       </section>
 
-      <section id="installations">
-        <h2>Installations</h2>
-        <br>
-        <ul>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target='_blank'>
-              liveServer</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target='_blank'>
-              Git Lens</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target='_blank'>
-              ESLint</a></li>
-          <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target='_blank'>
-              prettier</a></li>
-        </ul>
-        <br>
-        <br>
-        <code>(~5 min)</code>
-      </section>
 
       <section id="review-questions">
         <h2>Any questions from last week?</h2>
         <br>
         <br>
-        <code>(~20 min)</code>
-      </section>
-
-
-      <section id='git-github-gitkraken'>
-        <section>
-          <h2>Git/Hub Workflow Practice</h2>
-          <br>
-          <br>
-          <p>Some step-by-step practice.</p>
-          <br>
-          <code>(~60 min)</code>
-        </section>
-        <section>
-          <h2>Collaboration Conflicts</h2>
-          <br>
-          <p><a href="https://github.com/HackYourFutureBelgium/collaboration-illustration-exercise" target="_blank">
-              Live Demo
-            </a></p>
-        </section>
-        <section>
-          <h2>All together</h2>
-          <br>
-          <br>
-          <p><a
-              href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-add-new-file-push.md"
-              target="_blank">
-              Pull, add a file, commit, push
-            </a></p>
-          <br>
-        </section>
-        <section>
-          <h2>In small groups</h2>
-          <br><br>
-          <ul>
-            <li><a
-                href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/pull-request-and-merge.md"
-                target="_blank">
-                Pull Requests & Merging
-              </a></li>
-            <li><a href="https://github.com/HackYourFutureBelgium/git-github-practice/blob/master/code-review.md"
-                target="_blank">
-                Code Review
-              </a></li>
-          </ul>
-          <br>
-          <br>
-          <p><a href="https://study.hackyourfuture.be/git-and-github" target="_blank">(helpful links)</a></p>
-        </section>
-      </section>
-
-      <section>
-        <h1>Break!</h1>
+        <code>(~30 min)</code>
       </section>
 
       <section id="document-life-cycle">
@@ -211,184 +122,76 @@
           </ol>
           <br>
           <br>
-          <code>(~15 min)</code>
         </section>
-
         <section>
-          <h2>HTML & CSS Refresher</h2>
-          <br>
-          <br>
-          <p><a
-              href="https://docs.google.com/presentation/d/1ELETBYFC5HB6HgSgJWDe33wrE-61uAFHaVwY7zx6LDA/edit#slide=id.g505efa30ed_0_195"
-              target="_blank">
-              Slide Show</a>
-          </p>
-        </section>
-
-        <section>
-          <h2>Small group study time!</h2>
-          <br>
-          <ul>
-            <li><a href="#above-below">above / below</a></li>
-            <li><a href="#tables">tables</a></li>
-            <li><a href="#class-vs-tag">class vs. tag</a></li>
-            <li><a href="#inline-styles">inline styles</a></li>
-            <li><a href="#internal-styles">internal styles</a></li>
-            <li><a href="#css-selectors">CSS selectors</a></li>
-            <li><a href="#positioning">positioning</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Helpful Links</h2>
-          <br>
-          <ul>
-            <li><a href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549" target="_blank">How to
-                inspect an element</a>
-            </li>
-            <li><a href="https://hackyourfuture.be/inspecting-the-dom" target="_blank">Inspecting the DOM?</a></li>
-            <li><a
-                href="https://software.hixie.ch/utilities/js/live-dom-viewer/?%3C!DOCTYPE%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%27utf-8%27%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.container%20%7B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.above%20%7B%0A%20%20%20%20%20%20order%3A%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.below%20%7B%0A%20%20%20%20%20%20order%3A%202%3B%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cp%20id%3D%22p-1%22%20class%3D%22below%22%3E%0A%20%20%20%20%20%20first%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cp%20id%3D%22p-2%22%20class%3D%22above%22%3E%0A%20%20%20%20%20%20second%20p%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%0A%3C%2Fhtml%3E%0A"
-                target="_blank">Live DOM Viewer</a></li>
-            <li><a href="https://janke-learning.org/dom-tutor" target="_blank">DOM Tutor</a></li>
-            <li><a href="https://zapier.com/blog/inspect-element-tutorial/" target="_blank">Modify
-                the DOM. (does the source change?)</a>
-            </li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance"
-                target="_blank">cascade & inheritance</a></li>
-            <li><a href="https://css-tricks.com/specifics-on-css-specificity/" target="_blank">CSS Specificity</a></li>
-            <li><a href="https://css-tricks.com/almanac/properties/p/position/" target="_blank">CSS Positioning</a></li>
-          </ul>
-        </section>
-
-        <section id='above-below'>
-          <script>
-            codeAlong({
-              title: 'above / below',
-              container: 'above-below',
-              source: `./examples/above-below.html`,
-              type: 'document'
-            });
-          </script>
-        </section>
-
-        <section id='tables'>
-          <script>
-            codeAlong({
-              title: 'tables',
-              type: 'document',
-              container: 'tables',
-              source: `./examples/tables.html`
-            });
-          </script>
-        </section>
-
-        <section id='class-vs-tag'>
-          <script>
-            codeAlong({
-              title: 'class vs. tag',
-              type: 'document',
-              container: 'class-vs-tag',
-              source: `./examples/class-vs-tag.html`
-            });
-          </script>
-        </section>
-
-        <section id='inline-styles'>
-          <script>
-            codeAlong({
-              title: 'inline styles',
-              type: 'document',
-              container: 'inline-styles',
-              source: `./examples/inline-styles.html`
-            });
-          </script>
-        </section>
-
-        <section id='internal-styles'>
-          <script>
-            codeAlong({
-              title: 'internal styles',
-              type: 'document',
-              container: 'internal-styles',
-              source: `./examples/internal-styles.html`
-            });
-          </script>
-        </section>
-
-        <section id='css-selectors'>
-          <script>
-            codeAlong({
-              title: 'css selectors',
-              type: 'document',
-              container: 'css-selectors',
-              source: `./examples/css-selectors.html`
-            });
-          </script>
-        </section>
-
-        <section id='positioning'>
-          <script>
-            codeAlong({
-              title: 'positioning',
-              type: 'document',
-              container: 'positioning',
-              source: `./examples/positioning.html`
-            });
-          </script>
+          <p>slides & examples to study/explain this</p>
         </section>
 
       </section>
 
-      <section id="user-stories">
-        <section>
-          <h2>User Stories</h2>
-          <br>
-          <br>
-          <code>(~15 min)</code>
-        </section>
-        <section>
-          <h2>User Stories</h2>
-          <br>
-          <br>
-          <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
-          </ul>
-        </section>
-        <section>
-          <h2>
-            <a href="./user-stories-case-study.html" target="_blank">
-              Case Study
-            </a>
-          </h2>
-        </section>
+      <section>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
       </section>
 
+      <section id="code-along-project">
+        <section>
+          <h2>Pair Programming Project</h2>
+          <br>
+          <code>(~90 minutes)</code>
+          <br>
+          <br>
+          <h3><a href="https://github.com/HackYourFutureBelgium/semantic-pair-project" target='_blank'>Starter
+              Repo</a></h3>
+        </section>
+      </section>
 
       <section>
         <section>
-          <h2>Incremental Example</h2>
+          <h2>Example Project</h2>
           <br>
-          <br>
-          <p>Break into small groups to study this example</p>
-          <br>
-          <code>(~10 min)</code>
+          <p>All About Trees</p>
+        </section>
+        <section>
+          <h2><a href="https://github.com/hackyourfuturebelgium/built-with-branches" target='_blank'>
+              Finished Repository</a></h2>
         </section>
         <section id='all-about-trees'>
           <script>
             codeAlong({
-              title: 'All About Trees',
+              title: 'Developed in Steps',
               container: 'all-about-trees',
+              type: 'document',
               source: [
-                "./all-about-trees/0-empty-boilerplate.html",
-                "./all-about-trees/1-header-footer-dom.html",
-                "./all-about-trees/2-header-footer-styles.html",
-                "./all-about-trees/3-main-section-dom.html",
-                "./all-about-trees/4-main-section-styles.html",
-                "./all-about-trees/5-aside-dom.html",
-                "./all-about-trees/6-aside-styles.html",
+                {
+                  name: 'Boilerplate',
+                  path: "../example-projects/all-about-trees-stepped/0-empty-boilerplate.html",
+                },
+                {
+                  name: 'Header & Footer: DOM',
+                  path: "../example-projects/all-about-trees-stepped/1-header-footer-dom.html",
+                },
+                {
+                  name: 'Header & Footer: Style',
+                  path: "../example-projects/all-about-trees-stepped/2-header-footer-styles.html",
+                },
+                {
+                  name: 'Main Section: DOM',
+                  path: "../example-projects/all-about-trees-stepped/3-main-section-dom.html",
+                },
+                {
+                  name: 'Main Section: Style',
+                  path: "../example-projects/all-about-trees-stepped/4-main-section-styles.html",
+                },
+                {
+                  name: 'Aside: DOM',
+                  path: "../example-projects/all-about-trees-stepped/5-aside-dom.html",
+                },
+                {
+                  name: 'Aside: Style',
+                  path: "../example-projects/all-about-trees-stepped/6-aside-styles.html",
+                },
               ]
             });
           </script>
@@ -396,163 +199,265 @@
       </section>
 
 
-      <section id="using-git-branches">
+
+      <section>
         <section>
-          <h2>Using Git Branches</h2>
+          <h2>Snippets to Study</h2>
           <br>
-          <br>
-          <code>(~15 min)</code>
         </section>
-        <section>
-          <h2>Git Branches</h2>
-          <br>
-          <br>
-          <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
-          </ul>
+
+        <section id='semantic-layout'>
+          <script>
+            codeAlong({
+              title: 'Semantic Layout',
+              container: 'semantic-layout',
+              type: 'document',
+              source: [
+                {
+                  name: 'Semantic Elements',
+                  path: "../example-snippets/semantic-layout/semantic-elements.html",
+                },
+                {
+                  name: 'Laid Out',
+                  path: "../example-snippets/semantic-layout/laid-out.html",
+                },
+              ]
+            });
+          </script>
         </section>
-        <section>
-          <h2>
-            <a href="https://github.com/HackYourFutureBelgium/built-with-branches" target="_blank">
-              Case Study
-            </a>
-          </h2>
+
+        <section id='css-units'>
+          <script>
+            codeAlong({
+              title: 'CSS Units',
+              container: 'css-units',
+              type: 'document',
+              source: [
+                {
+                  name: 'Viewport: vh, vw',
+                  path: "../example-snippets/css-units/viewport.html",
+                },
+                {
+                  name: 'Percent: %',
+                  path: "../example-snippets/css-units/percent.html",
+                },
+                {
+                  name: 'Element Font Size: em',
+                  path: "../example-snippets/css-units/em.html",
+                },
+                {
+                  name: 'Pixels: px',
+                  path: "../example-snippets/css-units/pixels.html",
+                },
+              ]
+            });
+          </script>
+        </section>
+
+        <section id='float-clear'>
+          <script>
+            codeAlong({
+              title: 'Float & Clear',
+              container: 'float-clear',
+              type: 'document',
+              source: [
+                {
+                  name: 'Left',
+                  path: "../example-snippets/float-clear/left.html",
+                },
+                {
+                  name: 'Right',
+                  path: "../example-snippets/float-clear/right.html",
+                },
+                {
+                  name: 'Both',
+                  path: "../example-snippets/float-clear/both.html",
+                },
+                {
+                  name: 'None',
+                  path: "../example-snippets/float-clear/none.html",
+                },
+              ]
+            });
+          </script>
+        </section>
+
+        <section id='positioning'>
+          <script>
+            codeAlong({
+              title: 'Positioning',
+              container: 'positioning',
+              type: 'document',
+              source: [
+                {
+                  name: 'Everything',
+                  path: "../example-snippets/positioning.html",
+                },
+              ]
+            });
+          </script>
         </section>
       </section>
 
-      <section id="code-along-project">
+      <section>
         <section>
-          <h2>Code-Along Project</h2>
+          <h2>Helpful Links</h2>
           <br>
-          <br>
-          <code>(~45 min)</code>
         </section>
         <section>
-          <h2>So many softwares!</h2>
-          <br>
+          <h2>HTML</h2>
           <ul>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>GitKraken</li>
-            <li>Visual Studio Code</li>
-            <li>Browser</li>
-            <li>Command Line</li>
+            <li><a href="https://htmlcheatsheet.com/" target="_blank">
+                HTML Cheat Sheet</a>
+            </li>
+            <li><a href="https://stackoverflow.com/questions/16767617/semantic-html5-structure-versus-css-layout-needs"
+                target="_blank">
+                HTML5 Semantic Elements vs.
+                CSS</a>
+            </li>
+            <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">
+                Semantic Elements (w3schools)</a>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/semantics" target="_blank">
+                Semantic Elements (MDN)</a>
+            </li>
+            <li><a href="https://guide.freecodecamp.org/html/html5-semantic-elements/" target="_blank">
+                Semantic Elements (FCC)</a>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"
+                target="_blank">
+                Using Sections and Outlines
+                (MDN)</a>
+            </li>
           </ul>
         </section>
         <section>
-          <h2>Objectives:</h2>
+          <h2>CSS</h2>
           <br>
           <ul>
-            <li>Develop from a mock-up</li>
-            <li>Plan steps ahead of time</li>
-            <li>Start from an empty project</li>
-            <li>Develop each step on one branch</li>
-            <li>Use semantic HTML5 elements</li>
-            <li>Deploy before class ends</li>
+            <li><a href="https://htmlcheatsheet.com/css/" target="_blank">
+                CSS Cheat Sheet</a>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance"
+                target="_blank">cascade & inheritance</a></li>
+            <li><a href="https://css-tricks.com/specifics-on-css-specificity/" target="_blank">CSS Specificity</a>
+            </li>
+            <li><a href="https://css-tricks.com/almanac/properties/p/position/" target="_blank">CSS Positioning (CSS
+                Tricks)</a>
+            </li>
+            <li><a href="https://www.w3schools.com/Css/css_positioning.asp" target="_blank">CSS Positioning
+                (w3schools)</a>
+            </li>
           </ul>
         </section>
         <section>
-          <h2>HTML5 Semantic Layout</h2><br>
+          <h2>Git & Branching</h2>
+          <br>
           <br>
           <ul>
-            <li>What?</li>
-            <li>Why?</li>
-            <li>How?</li>
+            <li><a href="https://github.com/HackYourFutureBelgium/built-with-branches" target="_blank">
+                Example Project
+              </a></li>
+            <li><a href="https://support.gitkraken.com/working-with-repositories/open-clone-init/" target="_blank">
+                Cloning w/ GitKraken
+              </a></li>
+            <li><a href="https://support.gitkraken.com/working-with-repositories/branching-and-merging/"
+                target="_blank">
+                Branching & Merging w/ GitKraken
+              </a></li>
+            <li><a href="https://support.gitkraken.com/working-with-repositories/pushing-and-pulling/" target="_blank">
+                Pushing & Pulling w/ GitKraken
+              </a></li>
           </ul>
         </section>
         <section>
-          <h2><a href="https://github.com/hackyourfuturebelgium/tomato-timer-code-along" target='_blank'>Starter
-              Repo</a></h2>
+          <h2>Inspecting the DOM</h2>
+          <br>
+          <ul>
+            <li><a href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549" target="_blank">How to
+                inspect an element</a>
+            </li>
+            <li><a href="https://zapier.com/blog/inspect-element-tutorial/" target="_blank">
+                Modify the DOM. (does the source change?)</a>
+            </li>
+            <li><a href="https://hackyourfuture.be/inspecting-the-dom" target="_blank">Inspecting the DOM?</a></li>
+          </ul>
         </section>
+      </section>
+
+
+      <section>
+        <h1>End of Day Check-In</h1>
+        <br>
+        <p>Recap!</p>
       </section>
 
       <section id='homework-launch'>
         <section>
           <h2>Homework Launch</h2>
           <br>
-          <p>Start the homework together, so you have no excuses :)</p>
-          <br>
-          <code>(~15 min)</code>
+          <p>It's only just beginning :)</p>
         </section>
         <section>
-          <h3><a target="_blank" href="https://github.com/hackyourfuturebelgium/homework-submission">
-              Homework Submission Process</a></h3>
+          <h2><a href='https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1'
+              target='_blank'>
+              The Assignments</a></h2>
+        </section>
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#homework-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
           <br>
           <ol>
-            <li>Create your week 1 issue</li>
-            <li>Add the issue to the module project</li>
-            <li>Create the repo for your project</li>
-            <li>Link to your project repo in the new issue</li>
-            <li>Fork the exercise repositories</li>
-            <li>Link also to them in the issue</li>
-            <li>Sign in to
-              <a href="https://www.freecodecamp.org/" target='_blank'>
-                FCC</a> using GitHub
-            </li>
-            <li>Link your public profile to the issue</li>
+            <li>Name it something helpful</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+                target='_blank'>
+                Assign</a>, it to yourself</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+                target='_blank'>
+                Label</a>, it <code>week-1</code> and <code>homework</code></li>
+            <li><a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+                target='_blank'>
+                Milestone</a> it <code>incremental-development</code></li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project board</li>
           </ol>
-        </section>
-        <section>
-          <h2>Got all that?</h2>
         </section>
       </section>
 
-      <!-- if there is time -->
-      <!-- <section id="what-is-internet">
-          <section>
-            <h3>What is internet?</h3>
-            <iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0"
-              class="giphy-embed" allowFullScreen></iframe>
-            <p><a href="https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv"></a></p>
-            <code>(~10 min)</code>
-          </section>
-          <section>
-            <img
-              src="https://073bddbe7aa062defd37fde3-cwzdvdpfea.netdna-ssl.com/wp-content/uploads/2017/05/cloud-computing-logistics-2017-1000x640.jpg">
-          </section>
-          <section>
-            <h3>Yeah, great!</h3>
-            <iframe src="https://giphy.com/embed/dds5k7CtNGUpN93Abq" width="480" height="480" frameBorder="0"
-              class="giphy-embed" allowFullScreen></iframe>
-            <p><a href="https://giphy.com/gifs/lifetimetv-abs-lifetime-american-beauty-star-dds5k7CtNGUpN93Abq"></a></p>
-            <h4>But how this is working?</h4>
-          </section>
-          <section>
-            <img src="https://miro.medium.com/max/1200/0*th2x89zHuZmHGsLJ.png">
-          </section>
-          <section>
-            <img src="https://miro.medium.com/max/2560/1*AwGI1e13BoLvUd2wThmSLw.jpeg">
-          </section>
-          <section>
-            <img src="https://www.techcommuters.com/wp-content/uploads/2019/06/browsers.png">
-          </section>
-          <section>
-            <h1>DEMO TIME</h1>
-          </section>
-        </section> -->
 
-
-      <section id='cover-slide'>
+      <section id='end-slide'>
         <h3>Incremental Development</h3>
         <br>
         <h2>Week 1: Be Semantic</h2>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1">(back to repo)</a>
+        <p>
+          "<code>s</code>" for speaker notes
+          <!-- <br>
+                    "<code>b</code>" for chalkboard -->
+        </p>
+        <a href="https://github.com/hackyourfuturebelgium/incremental-development/tree/master/week-1" target='_blank'>
+          -- back to repo --
+        </a>
       </section>
 
 
     </div>
   </div>
 
-  <script src="../reveal.js/js/reveal.js"></script>
+  <script src="../dependencies/reveal.js/js/reveal.js"></script>
 
   <script>
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
       width: "100%",
       height: "100%",
       keyboard: {
@@ -561,7 +466,7 @@
       dependencies: [
         // { src: 'plugin/markdown/marked.js' },
         // { src: 'plugin/markdown/markdown.js' },
-        // { src: './reveal.js/plugin/notes/notes.js', async: true },
+        { src: '../dependencies/reveal.js/plugin/notes/notes.js', async: true },
         // { src: './reveal.js/plugin/chalkboard/chalkboard.js' },
         // { src: 'plugin/highlight/highlight.js', async: true }
       ]
@@ -570,11 +475,11 @@
 
     Reveal.addEventListener('overviewshown', function (event) {
       document.getElementById('footer-text').innerHTML = "ESC into slide";
-      document.getElementById('to-repo').style.visibility = 'visible';
+      document.getElementById('footer-links').style.visibility = 'visible';
     });
     Reveal.addEventListener('overviewhidden', function (event) {
       document.getElementById('footer-text').innerHTML = "ESC to overview";
-      document.getElementById('to-repo').style.visibility = 'hidden';
+      document.getElementById('footer-links').style.visibility = 'hidden';
     });
 
 
