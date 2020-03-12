@@ -15,7 +15,7 @@ Please take a minute to look through the embedded code-alongs for each Sunday be
 
 ## Class Recordings
 
-Recording your screen and your voice in class is enormously helpful to students over the week.  Feel free to use whatever softwares you're comfortable with, and to host the video however you like.  Just make sure to send a PR to `./class-recordings.md` for posterity :)
+Recording your screen and your voice in class is enormously helpful to students over the week.  Feel free to use whatever softwares you're comfortable with, and to host the video however you like.  Just make sure to send a PR to [study.hackyourfuture.be/class-recordings](https://study.hackyourfuture.be/class-recordings) for posterity :)
 
 ---
 ---
