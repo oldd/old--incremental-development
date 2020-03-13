@@ -113,6 +113,68 @@
 
       <section id="document-life-cycle">
         <section>
+          <h2>Git Branching</h2>
+          <br>
+          <p>Some guided practice</p>
+          <br>
+          <code>(~40 min)</code>
+        </section>
+        <section>
+          <h3>Part 1: Setup</h3>
+          <br>
+          <ol>
+            <li>Create a new repository on GitHub</li>
+            <li>Clone it into your <code>HYF</code> directory</li>
+            <li>Create a README.md file with some text (in VSC)</li>
+            <li>Add & commit the new file</li>
+            <li>Push your changes to GitHub</li>
+            <li>Check your GitHub to see the new file</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Part 2: Branching</h3>
+          <br>
+          <ol>
+            <li>On your computer, check out a new branch</li>
+            <li>Make a change to your README.md (in VSC)</li>
+            <li>Add & commit your changes</li>
+            <li>Checkout <code>master</code> branch</li>
+            <li>Your changes have disappeared!</li>
+            <li>Checkout your new branch again</li>
+            <li>Your changes have returned in VSC</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Part 3: Pushing Branches</h3>
+          <br>
+          <ol>
+            <li>Make sure you are on your new branch</li>
+            <li>Push the new branch to GitHub</li>
+            <li>Open your repo on GitHub and
+              <a href='https://help.github.com/en/github/administering-a-repository/viewing-branches-in-your-repository'
+                target='_blank'>
+                view your branches
+              </a>
+            </li>
+            <li>If you can see your new branch, you've made it!</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Part 4: Merging</h3>
+          <br>
+          <ol>
+            <li>On your computer, check out <code>master</code></li>
+            <li>Look at your code in VSC, the changes are not there</li>
+            <li>Merge your new branch into <code>master</code></li>
+            <li>Look at your code in VSC, the changes are there!</li>
+            <li>Push your <code>master</code> branch to GitHub</li>
+            <li>Now your changes are live in GitHub on both branches</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id="document-life-cycle">
+        <section>
           <h2>Document Life Cycle</h2>
           <br>
           <ol>
@@ -123,10 +185,38 @@
           <br>
           <br>
         </section>
-        <section>
-          <p>slides & examples to study/explain this</p>
+        <section id='life-cycle-examples'>
+          <script>
+            codeAlong({
+              title: 'Source -> DOM -> Rendered',
+              container: 'life-cycle-examples',
+              type: 'document',
+              source: [
+                {
+                  name: 'CSS: Rendering in a different order than the DOM',
+                  path: "../example-snippets/source-dom-rendered/above-below.html",
+                },
+                {
+                  name: 'Tables: tbody is added to the DOM',
+                  path: "../example-snippets/source-dom-rendered/tables.html",
+                },
+              ]
+            });
+          </script>
         </section>
-
+        <section>
+          <h2>Helpful Link</h2>
+          <br>
+          <ul>
+            <li><a href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549" target="_blank">How to
+                inspect an element</a>
+            </li>
+            <li><a href="https://zapier.com/blog/inspect-element-tutorial/" target="_blank">
+                Modify the DOM. (does the source change?)</a>
+            </li>
+            <li><a href="https://hackyourfuture.be/inspecting-the-dom" target="_blank">Inspecting the DOM?</a></li>
+          </ul>
+        </section>
       </section>
 
       <section>
@@ -368,19 +458,6 @@
             <li><a href="https://support.gitkraken.com/working-with-repositories/pushing-and-pulling/" target="_blank">
                 Pushing & Pulling w/ GitKraken
               </a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>Inspecting the DOM</h2>
-          <br>
-          <ul>
-            <li><a href="https://www.lifewire.com/get-inspect-element-tool-for-browser-756549" target="_blank">How to
-                inspect an element</a>
-            </li>
-            <li><a href="https://zapier.com/blog/inspect-element-tutorial/" target="_blank">
-                Modify the DOM. (does the source change?)</a>
-            </li>
-            <li><a href="https://hackyourfuture.be/inspecting-the-dom" target="_blank">Inspecting the DOM?</a></li>
           </ul>
         </section>
       </section>

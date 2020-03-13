@@ -17,7 +17,6 @@ This module's main objective is to learn how Git & GitHub can be used to organiz
 * [git & github for poets](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) - watch through 1.4
 * [LearnGitBranching](https://learngitbranching.js.org/) & [video tutorial](https://www.youtube.com/watch?v=dG0ke9vILQM) - complete the first set of exercises
 * [Familiarize yourself with GitKraken](https://support.gitkraken.com/start-here/interface/)
-* [Study this example project](https://github.com/hackyourfuturebelgium/built-with-branches)
 * [Understand how to use Atomic Commits](https://curiousprogrammer.io/blog/how-to-craft-your-changes-into-small-atomic-commits-using-git)
 
 ### User Stories
@@ -32,11 +31,6 @@ Not super complicated, but a little tricky at first.   And this will come up _al
 
 * [relative vs. absolute paths](https://www.youtube.com/watch?v=ephId3mYu9o)
 
-### Internet?
-
-* [How the Internet Works in 5 Minutes](https://www.youtube.com/watch?v=7_LPdttKXPc)
-* [How do Web Browsers Work?](https://www.youtube.com/watch?v=WjDrMKZWCt0)
-
 ### Code Review
 
 Starting in this module, you will be using GitHub code review processes to ask for help on your projects and exercises (and to help your classmates!).  Whenever you are struggling with something instead of sharing massive blocks of code or screen-shots on Slack, you will push your work to GitHub and create an issue containing screen shots and references the lines of code you are stuck on.
@@ -46,7 +40,6 @@ After sharing a link to this new issue on Slack, your peers and coaches will giv
 For a while, this process will be a bit confusing and may even get in the way of solving your code problems.  But it's worth it! Mastering code review workflows _now_ will make it possible for you to focus on your code troubles _later_ when your projects are a whole lot more complicated.
 
 * [Take a look through this page from Study](https://study.hackyourfuture.be/programming/code-review)
-
 
 ---
 
